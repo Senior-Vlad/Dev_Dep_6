@@ -8,11 +8,16 @@
     "net9.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/Users/mac/.nuget/packages/": {}
+=======
+    "/Users/user/.nuget/packages/": {}
+>>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
       "projectName": "Project_6",
       "projectPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mac/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+      "projectName": "Project_6",
+      "projectPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+      "packagesPath": "/Users/user/.nuget/packages/",
+      "outputPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/user/.nuget/NuGet/NuGet.Config"
+>>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -68,7 +83,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
       }
     }
   }

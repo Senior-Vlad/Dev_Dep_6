@@ -1,4 +1,13 @@
 <style>
+    .container {
+        background: #fff;
+        width: 450px;
+        padding: 1.5rem;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+    }
+
     form {
         margin: 0 2rem;
     }
@@ -33,7 +42,6 @@
 
     .input-group select {
         width: calc(100% - 10px);
-        /* Adjust width */
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -41,7 +49,6 @@
         font-size: 16px;
         appearance: none;
         margin-bottom: 20px;
-        /* Moves dropdown right */
     }
 
     input:focus {
@@ -139,16 +146,13 @@
     .links {
         display: flex;
         justify-content: center;
-        /* Centers the content horizontally */
         align-items: center;
-        /* Aligns the content vertically */
         margin-top: 0.9rem;
         font-weight: bold;
     }
 
     .links p {
         margin-right: 4px;
-        /* Adds space between the text and the link */
     }
 
     button {
@@ -195,6 +199,6 @@
 
     <div class="links">
         <p>Don't have an account yet?</p>
-        <a href="" id="signUpLink">Sign Up</a> <!-- Fixed: Used href instead of src -->
+        <a href="" id="signUpLink">Sign Up</a>
     </div>
 </div>

@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\STUDIA\\Semestr IV\\Inżynieria oprogramowania\\Dev_Dep_6\\Project_6\\Project_6.csproj",
       "projectName": "Project_6",
-      "projectPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/",
+      "projectPath": "C:\\Users\\lenovo\\Desktop\\STUDIA\\Semestr IV\\Inżynieria oprogramowania\\Dev_Dep_6\\Project_6\\Project_6.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lenovo\\Desktop\\STUDIA\\Semestr IV\\Inżynieria oprogramowania\\Dev_Dep_6\\Project_6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/user/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

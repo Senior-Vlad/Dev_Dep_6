@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "+zO4YOZnni9YHpn0Eox9T3xKY9h7Q+rw8FqE4pQJVBY=",
+=======
+  "Hash": "p1j5Eumhs87Xd8U9gDKrC+Xx4CNHTG1EFzoTNvPuv/Y=",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
   "Source": "Project_6",
   "BasePath": "_content/Project_6",
   "Mode": "Default",
@@ -59,12 +63,16 @@
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
+=======
+      "Identity": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "SourceId": "Project_6",
       "SourceType": "Computed",
       "ContentRoot": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Project_6",
-      "RelativePath": "Project_6#[.{fingerprint=p06gco67qi}]?.styles.css.gz",
+      "RelativePath": "Project_6#[.{fingerprint=jktinqqxbh}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -73,8 +81,8 @@
       "RelatedAsset": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "premqb4vwg",
-      "Integrity": "RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=",
+      "Fingerprint": "meqjpig4ja",
+      "Integrity": "krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css"
@@ -710,12 +718,16 @@
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
+=======
+      "Identity": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "SourceId": "Project_6",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Project_6",
-      "RelativePath": "css/site#[.{fingerprint=lugek5hnai}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=q5uce5rwv4}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -724,8 +736,8 @@
       "RelatedAsset": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "fap03slvfg",
-      "Integrity": "B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY=",
+      "Fingerprint": "d4eqgd2dvq",
+      "Integrity": "A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/css/site.css"
@@ -1067,12 +1079,16 @@
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/lib/jquery/dist/jquery.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
+=======
+      "Identity": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "SourceId": "Project_6",
       "SourceType": "Computed",
       "ContentRoot": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Project_6",
-      "RelativePath": "Project_6#[.{fingerprint=p06gco67qi}]!.bundle.scp.css.gz",
+      "RelativePath": "Project_6#[.{fingerprint=jktinqqxbh}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -1081,8 +1097,8 @@
       "RelatedAsset": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "premqb4vwg",
-      "Integrity": "RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=",
+      "Fingerprint": "meqjpig4ja",
+      "Integrity": "krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css"
@@ -1375,8 +1391,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "p06gco67qi",
-      "Integrity": "eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=",
+      "Fingerprint": "jktinqqxbh",
+      "Integrity": "zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css"
@@ -1396,8 +1412,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "p06gco67qi",
-      "Integrity": "eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=",
+      "Fingerprint": "jktinqqxbh",
+      "Integrity": "zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css"
@@ -1417,8 +1433,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lugek5hnai",
-      "Integrity": "zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=",
+      "Fingerprint": "q5uce5rwv4",
+      "Integrity": "rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -2729,12 +2745,16 @@
   "Endpoints": [
     {
       "Route": "css/site.css",
+<<<<<<< HEAD
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
+=======
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003194888179"
+          "Quality": "0.003086419753"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2764,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "312"
+          "Value": "323"
         },
         {
           "Name": "ETag",
-          "Value": "\"B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY=\""
+          "Value": "\"A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +2796,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "W/\"rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
+          "Value": "sha256-rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q="
         }
       ]
     },
@@ -2793,7 +2817,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "637"
+          "Value": "641"
         },
         {
           "Name": "Content-Type",
@@ -2801,11 +2825,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "\"rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -2815,13 +2843,17 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
+          "Value": "sha256-rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
+<<<<<<< HEAD
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
+=======
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2830,7 +2862,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "312"
+          "Value": "323"
         },
         {
           "Name": "Content-Type",
@@ -2838,11 +2870,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY=\""
+          "Value": "\"A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -2860,18 +2896,23 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY="
+          "Value": "sha256-A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "css/site.lugek5hnai.css",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
+=======
+      "Route": "css/site.q5uce5rwv4.css",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003194888179"
+          "Quality": "0.003086419753"
         }
       ],
       "ResponseHeaders": [
@@ -2881,15 +2922,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "312"
+          "Value": "323"
         },
         {
           "Name": "ETag",
-          "Value": "\"B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY=\""
+          "Value": "\"A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -2909,13 +2954,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "W/\"rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lugek5hnai"
+          "Value": "q5uce5rwv4"
         },
         {
           "Name": "label",
@@ -2923,13 +2968,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
+          "Value": "sha256-rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "css/site.lugek5hnai.css",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/css/site.css",
+=======
+      "Route": "css/site.q5uce5rwv4.css",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/wwwroot/css/site.css",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2938,7 +2988,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "637"
+          "Value": "641"
         },
         {
           "Name": "Content-Type",
@@ -2946,11 +2996,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "\"rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -2960,7 +3014,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lugek5hnai"
+          "Value": "q5uce5rwv4"
         },
         {
           "Name": "label",
@@ -2968,13 +3022,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
+          "Value": "sha256-rtXivzZNDes6Xyqa0fh6RSWJYUftoslX6zHaNeK/0+Q="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "css/site.lugek5hnai.css.gz",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
+=======
+      "Route": "css/site.q5uce5rwv4.css.gz",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2983,7 +3042,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "312"
+          "Value": "323"
         },
         {
           "Name": "Content-Type",
@@ -2991,11 +3050,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY=\""
+          "Value": "\"A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -3013,7 +3076,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lugek5hnai"
+          "Value": "q5uce5rwv4"
         },
         {
           "Name": "label",
@@ -3021,7 +3084,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-B2NcGeycNm1fppl5ueYw/SoIaM1eiU6mnFitSmrq4lY="
+          "Value": "sha256-A3JKE1DzX7j31ZnAxwjSjqXgxfQRorrsTPCBPu67JJk="
         }
       ]
     },
@@ -21287,12 +21350,16 @@
     },
     {
       "Route": "Project_6.bundle.scp.css",
+<<<<<<< HEAD
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
+=======
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001652892562"
+          "Quality": "0.001703577513"
         }
       ],
       "ResponseHeaders": [
@@ -21302,15 +21369,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21330,13 +21401,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "W/\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
@@ -21351,7 +21422,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1251"
+          "Value": "1157"
         },
         {
           "Name": "Content-Type",
@@ -21359,11 +21430,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21373,13 +21448,17 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
     {
       "Route": "Project_6.bundle.scp.css.gz",
+<<<<<<< HEAD
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
+=======
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21388,7 +21467,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "Content-Type",
@@ -21396,11 +21475,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21418,18 +21501,23 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw="
+          "Value": "sha256-krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Project_6.p06gco67qi.bundle.scp.css",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
+=======
+      "Route": "Project_6.jktinqqxbh.bundle.scp.css",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001652892562"
+          "Quality": "0.001703577513"
         }
       ],
       "ResponseHeaders": [
@@ -21439,15 +21527,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21467,13 +21559,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "W/\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p06gco67qi"
+          "Value": "jktinqqxbh"
         },
         {
           "Name": "label",
@@ -21481,13 +21573,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Project_6.p06gco67qi.bundle.scp.css",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css",
+=======
+      "Route": "Project_6.jktinqqxbh.bundle.scp.css",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21496,7 +21593,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1251"
+          "Value": "1157"
         },
         {
           "Name": "Content-Type",
@@ -21504,11 +21601,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21518,7 +21619,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p06gco67qi"
+          "Value": "jktinqqxbh"
         },
         {
           "Name": "label",
@@ -21526,13 +21627,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Project_6.p06gco67qi.bundle.scp.css.gz",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
+=======
+      "Route": "Project_6.jktinqqxbh.bundle.scp.css.gz",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21541,7 +21647,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "Content-Type",
@@ -21549,11 +21655,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21571,7 +21681,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p06gco67qi"
+          "Value": "jktinqqxbh"
         },
         {
           "Name": "label",
@@ -21579,18 +21689,23 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw="
+          "Value": "sha256-krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Project_6.p06gco67qi.styles.css",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
+=======
+      "Route": "Project_6.jktinqqxbh.styles.css",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001652892562"
+          "Quality": "0.001703577513"
         }
       ],
       "ResponseHeaders": [
@@ -21600,15 +21715,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21628,13 +21747,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "W/\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p06gco67qi"
+          "Value": "jktinqqxbh"
         },
         {
           "Name": "label",
@@ -21642,13 +21761,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Project_6.p06gco67qi.styles.css",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css",
+=======
+      "Route": "Project_6.jktinqqxbh.styles.css",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21657,7 +21781,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1251"
+          "Value": "1157"
         },
         {
           "Name": "Content-Type",
@@ -21665,11 +21789,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21679,7 +21807,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p06gco67qi"
+          "Value": "jktinqqxbh"
         },
         {
           "Name": "label",
@@ -21687,13 +21815,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Project_6.p06gco67qi.styles.css.gz",
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
+=======
+      "Route": "Project_6.jktinqqxbh.styles.css.gz",
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21702,7 +21835,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "Content-Type",
@@ -21710,11 +21843,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21732,7 +21869,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p06gco67qi"
+          "Value": "jktinqqxbh"
         },
         {
           "Name": "label",
@@ -21740,18 +21877,22 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw="
+          "Value": "sha256-krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0="
         }
       ]
     },
     {
       "Route": "Project_6.styles.css",
+<<<<<<< HEAD
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
+=======
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001652892562"
+          "Quality": "0.001703577513"
         }
       ],
       "ResponseHeaders": [
@@ -21761,15 +21902,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21789,13 +21934,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "W/\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
@@ -21810,7 +21955,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1251"
+          "Value": "1157"
         },
         {
           "Name": "Content-Type",
@@ -21818,11 +21963,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4=\""
+          "Value": "\"zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21832,13 +21981,17 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eY4exdq1c302xPL9NUtAimoWG7GpAQDFCH3bEHkvIw4="
+          "Value": "sha256-zZoDGQdOb5+Dz/1Tmm7flHE/KEi5IGq8ZTQhCC7JZU4="
         }
       ]
     },
     {
       "Route": "Project_6.styles.css.gz",
+<<<<<<< HEAD
       "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
+=======
+      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21847,7 +22000,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "604"
+          "Value": "586"
         },
         {
           "Name": "Content-Type",
@@ -21855,11 +22008,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw=\""
+          "Value": "\"krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
+=======
+          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
+>>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
         },
         {
           "Name": "Cache-Control",
@@ -21877,7 +22034,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RVrVG0bZIzRupPaxxJ34PdHAiRcGTvzzNDsYIEEkstw="
+          "Value": "sha256-krJ8U+b1W8Grzj2vGfkZ1DoDAwNLqAjp4r26TDM3qi0="
         }
       ]
     }

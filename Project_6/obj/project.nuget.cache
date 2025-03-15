@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "Vy8mCb9mEdA=",
   "success": true,
   "projectFilePath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
-=======
-  "dgSpecHash": "YZ/cN5sTtzI=",
-  "success": true,
-  "projectFilePath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
->>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

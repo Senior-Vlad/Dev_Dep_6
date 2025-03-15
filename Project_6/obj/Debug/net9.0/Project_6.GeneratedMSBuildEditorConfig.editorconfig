@@ -9,26 +9,21 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project_6
 build_property.RootNamespace = Project_6
-<<<<<<< HEAD
 build_property.ProjectDir = /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/
-=======
-build_property.ProjectDir = /Users/user/Downloads/Dev_Dep_6/Project_6/
->>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6
-=======
-build_property.MSBuildProjectDirectory = /Users/user/Downloads/Dev_Dep_6/Project_6
->>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-<<<<<<< HEAD
+[/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,36 +49,5 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Views/Shared/_Layout.cshtml]
-=======
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Shared/_Layout.cshtml]
->>>>>>> 58b00b02c355975c1c5e3f1d7818820981f6ac30
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yh08v4nh0m

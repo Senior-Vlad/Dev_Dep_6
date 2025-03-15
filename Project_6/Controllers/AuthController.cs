@@ -20,5 +20,19 @@ public class AuthController : Controller
     }
 
 
+ public IActionResult Signup()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Signup(string username, string email, string password)
+    {
+        // database logic to be implemented
+        ViewBag.Message = $"User {username} has been successfully registered!";
+    
+        return RedirectToAction("Index", "Home");
+    }
+
 }
 

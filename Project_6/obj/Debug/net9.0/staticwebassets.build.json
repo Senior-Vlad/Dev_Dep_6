@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "+zO4YOZnni9YHpn0Eox9T3xKY9h7Q+rw8FqE4pQJVBY=",
-=======
-  "Hash": "p1j5Eumhs87Xd8U9gDKrC+Xx4CNHTG1EFzoTNvPuv/Y=",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+  "Hash": "DrR0GPoCBfJxW0fMihFscBz4XGG+OiXC6HaS9t9Ro/Y=",
   "Source": "Project_6",
   "BasePath": "_content/Project_6",
   "Mode": "Default",
@@ -63,11 +59,7 @@
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
-=======
-      "Identity": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
       "SourceId": "Project_6",
       "SourceType": "Computed",
       "ContentRoot": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/",
@@ -718,11 +710,7 @@
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
-=======
-      "Identity": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
       "SourceId": "Project_6",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/",
@@ -1079,11 +1067,7 @@
       "OriginalItemSpec": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
-=======
-      "Identity": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "Identity": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
       "SourceId": "Project_6",
       "SourceType": "Computed",
       "ContentRoot": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/",
@@ -2745,11 +2729,7 @@
   "Endpoints": [
     {
       "Route": "css/site.css",
-<<<<<<< HEAD
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
-=======
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2772,11 +2752,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 10:40:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2829,11 +2805,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 10:40:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2849,11 +2821,7 @@
     },
     {
       "Route": "css/site.css.gz",
-<<<<<<< HEAD
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
-=======
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2874,11 +2842,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 10:40:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2901,13 +2865,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "css/site.lugek5hnai.css",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
-=======
       "Route": "css/site.q5uce5rwv4.css",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2930,11 +2889,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 10:40:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2973,13 +2928,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "css/site.lugek5hnai.css",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/css/site.css",
-=======
       "Route": "css/site.q5uce5rwv4.css",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/wwwroot/css/site.css",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3000,11 +2950,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 10:40:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3027,13 +2973,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "css/site.lugek5hnai.css.gz",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-lugek5hnai.gz",
-=======
       "Route": "css/site.q5uce5rwv4.css.gz",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3054,11 +2995,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Tue, 11 Mar 2025 15:48:51 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:28:16 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 10:40:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21350,11 +21287,7 @@
     },
     {
       "Route": "Project_6.bundle.scp.css",
-<<<<<<< HEAD
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
-=======
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21377,11 +21310,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21434,11 +21363,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21454,11 +21379,7 @@
     },
     {
       "Route": "Project_6.bundle.scp.css.gz",
-<<<<<<< HEAD
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
-=======
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21479,11 +21400,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21506,13 +21423,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "Project_6.p06gco67qi.bundle.scp.css",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
-=======
       "Route": "Project_6.jktinqqxbh.bundle.scp.css",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21535,11 +21447,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21578,13 +21486,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "Project_6.p06gco67qi.bundle.scp.css",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css",
-=======
       "Route": "Project_6.jktinqqxbh.bundle.scp.css",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21605,11 +21508,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21632,13 +21531,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "Project_6.p06gco67qi.bundle.scp.css.gz",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-p06gco67qi.gz",
-=======
       "Route": "Project_6.jktinqqxbh.bundle.scp.css.gz",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21659,11 +21553,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21694,13 +21584,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "Project_6.p06gco67qi.styles.css",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
-=======
       "Route": "Project_6.jktinqqxbh.styles.css",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21723,11 +21608,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21766,13 +21647,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "Project_6.p06gco67qi.styles.css",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css",
-=======
       "Route": "Project_6.jktinqqxbh.styles.css",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21793,11 +21669,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21820,13 +21692,8 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "Project_6.p06gco67qi.styles.css.gz",
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
-=======
       "Route": "Project_6.jktinqqxbh.styles.css.gz",
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21847,11 +21714,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21883,11 +21746,7 @@
     },
     {
       "Route": "Project_6.styles.css",
-<<<<<<< HEAD
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
-=======
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21910,11 +21769,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21967,11 +21822,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21987,11 +21838,7 @@
     },
     {
       "Route": "Project_6.styles.css.gz",
-<<<<<<< HEAD
-      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-p06gco67qi.gz",
-=======
-      "AssetFile": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+      "AssetFile": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -22012,11 +21859,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Fri, 14 Mar 2025 14:39:44 GMT"
-=======
-          "Value": "Fri, 14 Mar 2025 22:25:32 GMT"
->>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+          "Value": "Sat, 15 Mar 2025 11:02:30 GMT"
         },
         {
           "Name": "Cache-Control",

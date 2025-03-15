@@ -31,5 +31,9 @@ app.MapControllerRoute(
 //     pattern: "{controller=Home}/{action=Index}/{id?}")
 //     .WithStaticAssets();
 
+app.MapControllerRoute(
+    name: "signup",
+    pattern: "signup",
+    defaults: new { controller = "Auth", action = "Signup" });
 
 app.Run();

@@ -395,3 +395,6 @@ C:/Users/lenovo/Desktop/STUDIA/Semestr IV/Inżynieria oprogramowania/Dev_Dep_6/P
 /Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz
 /Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz
 >>>>>>> 7c74f9bf18b1a87c8d515dddecf4577bb7e0f390
+/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-q5uce5rwv4.gz
+/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0xfalu69y1-jktinqqxbh.gz
+/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/u8dqx54j45-jktinqqxbh.gz

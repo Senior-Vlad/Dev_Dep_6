@@ -1,3 +1,13 @@
+@if (ViewBag.Error != null)
+{
+    <div class=error-message>@ViewBag.Error</div>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class=success-message>@ViewBag.Message</div>
+}
+
 <style>
     .container {
         background: #fff;

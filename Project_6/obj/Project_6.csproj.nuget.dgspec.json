@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj": {}
+    "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj": {}
   },
   "projects": {
-    "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj": {
+    "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
+        "projectUniqueName": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
         "projectName": "Project_6",
-        "projectPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
-        "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/",
+        "projectPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mac/.nuget/NuGet/NuGet.Config"
+          "/Users/user/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -43,6 +43,26 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0-preview.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.0-preview.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0-beta.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

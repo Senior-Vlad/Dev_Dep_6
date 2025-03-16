@@ -19,7 +19,7 @@ public class AuthController : Controller
         var user = _context.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
         if (user != null)
         {
-            HttpContext.Session.SetString("Username", user.Username);
+            // HttpContext.Session.SetString("Username", user.Username);
             return RedirectToAction("Index", "Home");
         }
         ViewBag.Error = "Invalid username or password";
@@ -51,8 +51,6 @@ public class AuthController : Controller
         _context.Users.Add(newUser);
         _context.SaveChanges();
 
-
-        // database logic to be implemented
         ViewBag.Message = $"User {username} has been successfully registered!";
 
         return RedirectToAction("Login");

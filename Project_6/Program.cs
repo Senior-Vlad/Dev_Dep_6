@@ -12,9 +12,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         ServerVersion.AutoDetect("Server=mysql-devdep-server.mysql.database.azure.com;Port=3306;Database=devdep;UserID=sqladmin;Password=Database123@;")
     )
 );
-builder.Services.AddSession();
+// builder.Services.AddSession();
 var app = builder.Build();
-app.UseSession();
+// app.UseSession();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

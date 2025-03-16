@@ -180,6 +180,10 @@
 
 <div class="container" id="signIn">
     <h1 class="form-title">Sign In</h1>
+    @if (ViewBag.Error != null)
+    {
+        <div class="error-message">@ViewBag.Error</div>
+    }
     <form method="post">
         <div class="input-group">
             <i class="fas fa-user"></i>

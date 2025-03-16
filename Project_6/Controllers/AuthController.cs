@@ -3,6 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 
 public class AuthController : Controller
 {
+    private string HashPassword(string password)
+    {
+        using var sha256 = System.Security.Cryptography.SHA256.Create();
+        var hashedBytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+        return Convert.ToBase64String(hashedBytes);
+    }
     private readonly ApplicationDbContext _context;
     public AuthController(ApplicationDbContext context)
     {
@@ -33,8 +39,17 @@ public class AuthController : Controller
     }
 
     [HttpPost]
-    public IActionResult Signup(string username, string email, string password)
+    public IActionResult Signup(string username, string email, string password, string token)
     {
+        var regToken = _context.RegistrationTokens
+        .FirstOrDefault(t => t.Token == token && !t.IsUsed);
+
+        if (regToken == null)
+        {
+            ViewBag.Error = "Invalid or already used registration token.";
+            return View();
+        }
+
         if (_context.Users.Any(u => u.Email == email))
         {
             ViewBag.Error = "Email is already registerd.";
@@ -45,10 +60,11 @@ public class AuthController : Controller
         {
             Username = username,
             Email = email,
-            Password = password
+            Password = HashPassword(password)
         };
 
         _context.Users.Add(newUser);
+        regToken.IsUsed = true;
         _context.SaveChanges();
 
         ViewBag.Message = $"User {username} has been successfully registered!";

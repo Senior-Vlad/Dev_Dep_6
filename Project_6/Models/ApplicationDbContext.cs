@@ -14,10 +14,12 @@
 //     }
 // }
 using Microsoft.EntityFrameworkCore;
+using Project_6.Models;
 
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
     public DbSet<User> Users { get; set; }
+    public DbSet <RegistrationToken> RegistrationTokens { get; set; }
 }

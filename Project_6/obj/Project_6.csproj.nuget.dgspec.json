@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj": {}
+    "D:\\github\\Dev_Dep_6\\Dev_Dep_6-1\\Dev_Dep_6\\Project_6\\Project_6.csproj": {}
   },
   "projects": {
-    "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj": {
+    "D:\\github\\Dev_Dep_6\\Dev_Dep_6-1\\Dev_Dep_6\\Project_6\\Project_6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+        "projectUniqueName": "D:\\github\\Dev_Dep_6\\Dev_Dep_6-1\\Dev_Dep_6\\Project_6\\Project_6.csproj",
         "projectName": "Project_6",
-        "projectPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
-        "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/",
+        "projectPath": "D:\\github\\Dev_Dep_6\\Dev_Dep_6-1\\Dev_Dep_6\\Project_6\\Project_6.csproj",
+        "packagesPath": "C:\\Users\\vlady\\.nuget\\packages\\",
+        "outputPath": "D:\\github\\Dev_Dep_6\\Dev_Dep_6-1\\Dev_Dep_6\\Project_6\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/user/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vlady\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

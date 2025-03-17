@@ -1,7 +1,9 @@
+﻿@using Microsoft.AspNetCore.Http
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Project_6</title>
@@ -10,16 +12,45 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Project_6.styles.css" asp-append-version="true" />
 </head>
-<style>
-    .container-fluid {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-</style>
 
 <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Project_6</a>
+            <button class="navbar-toggler" id="toggleNavbar">
+                <img src="~/img/menu.png" alt="Menu" width="30" height="30">
+            </button>
+
+            <ul class="navbar-menu" id="navbarContent">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+
+                @if (Context.Session.GetString("Username") != null)
+                {
+                    var role = Context.Session.GetString("Role");
+
+                    @if (role == "admin" || role == "superadmin")
+                    {
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a>
+                        </li>
+                    }
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Auth" asp-action="Login">Login</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
 
     <div class="container-fluid">
         <main role="main" class="pb-3">

@@ -6,4 +6,5 @@ public class RegistrationToken
     public string Token { get; set; }
     public bool IsUsed { get; set; }
     public DateTime CreatedAt { get; set; }
+    public string Role { get; set; }
 }

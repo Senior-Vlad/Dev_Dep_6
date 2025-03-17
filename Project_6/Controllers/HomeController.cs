@@ -15,6 +15,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        var username = HttpContext.Session.GetString("Username");
+
+        if (string.IsNullOrEmpty(username))
+        {
+            // якщо користувач НЕ авторизований, перенаправити на Login
+            return RedirectToAction("Login", "Auth");
+        }
         return View();
     }
 

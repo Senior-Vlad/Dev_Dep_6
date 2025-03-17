@@ -196,9 +196,11 @@
             <label for="password">Password</label>
         </div>
         <p class="recover">
-            <a href="#">Recover Password</a>
+            <a asp-controller="Auth" asp-action="Recover" class="btn">Recover</a>
         </p>
-        <input type="submit" class="btn" value="Sign In" name="signIn">
+        <p class="recover">
+            <input type="submit" class="btn" value="Sign In" name="signIn">
+        </p>
     </form>
 
     <div class="links">

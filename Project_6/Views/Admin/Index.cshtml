@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<h2>Admin Panel</h2>
+
+<form method="post" asp-action="CreateToken">
+    <input type="text" name="token" placeholder="Enter new token" required />
+    <select name="role" required>
+        <option value="user">User</option>
+        <option value="secretariate">Secretariate</option>
+        <option value="admin">Admin</option>
+        <!--superadmin can border assigned only through database  -->
+    </select>
+    <button type="submit">Create Token</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green;">@ViewBag.Message</p>
+}
+@if (ViewBag.Error != null)
+{
+    <p style="color: red;">@ViewBag.Error</p>
+}

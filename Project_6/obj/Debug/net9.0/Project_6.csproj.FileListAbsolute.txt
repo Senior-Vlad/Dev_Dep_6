@@ -560,9 +560,7 @@ D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\Project_6.s
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\scopedcss\bundle\Project_6.styles.css
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\scopedcss\projectbundle\Project_6.bundle.scp.css
-D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\knost45aie-5ffoikb37z.gz
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\q42kdwbdgd-61n19gt1b8.gz
-D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\ut62l2g56n-xtxxf3hu2r.gz
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\0juescxj5k-t1cqhe9u97.gz
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\x2yozgucl8-c2jlpeoesf.gz
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\6pgax99d02-sejl45xvog.gz
@@ -639,3 +637,5 @@ D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\refint\Proj
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\Project_6.pdb
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\Project_6.genruntimeconfig.cache
 D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\ref\Project_6.dll
+D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\ut62l2g56n-9frkjj7va4.gz
+D:\github\Dev_Dep_6\Dev_Dep_6-1\Dev_Dep_6\Project_6\obj\Debug\net9.0\compressed\knost45aie-8gtvisx3d8.gz

@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Recover";
+}
+
+<h2>Recover Account</h2>
+
+<div>
+    <button id="forgotPasswordBtn" class="btn btn-primary">Forgot Password</button>
+    <button id="forgotUsernameBtn" class="btn btn-secondary">Forgot Username</button>
+</div>
+
+<!-- Форма для відновлення пароля -->
+<div id="passwordForm" style="display: none;">
+    <h4>Reset Password</h4>
+    <form method="post" asp-action="ResetPassword">
+        <div class="form-group">
+            <label for="token">Token:</label>
+            <input type="text" class="form-control" name="token" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Registered Email:</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+<!-- Форма для відновлення username -->
+<div id="usernameForm" style="display: none;">
+    <h4>Recover Username</h4>
+    <form method="post" asp-action="RecoverUsername">
+        <div class="form-group">
+            <label for="token">Token:</label>
+            <input type="text" class="form-control" name="token" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Registered Email:</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("forgotPasswordBtn").addEventListener("click", function () {
+        document.getElementById("passwordForm").style.display = "block";
+        document.getElementById("usernameForm").style.display = "none";
+    });
+
+    document.getElementById("forgotUsernameBtn").addEventListener("click", function () {
+        document.getElementById("usernameForm").style.display = "block";
+        document.getElementById("passwordForm").style.display = "none";
+    });
+</script>

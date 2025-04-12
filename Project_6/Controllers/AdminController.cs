@@ -25,6 +25,20 @@ public class AdminController : Controller
 
         return View();
     }
+    public IActionResult Home()
+    {
+        // Veryfing if the user is an admin
+        var username = HttpContext.Session.GetString("Username");
+        var user = _context.Users.FirstOrDefault(u => u.Username == username);
+
+        if (user == null || (user.Role != "admin" && user.Role != "superadmin"))
+        {
+            return RedirectToAction("Login");
+        }
+
+        return View();
+    }
+
 
     [HttpPost]
     public IActionResult CreateToken(string token, string role)
@@ -66,5 +80,11 @@ public class AdminController : Controller
 
         return View("Index");
     }
+
+    public IActionResult CreateToken()
+    {
+        return View("Index");
+    }
+
 
 }

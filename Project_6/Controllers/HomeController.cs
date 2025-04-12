@@ -19,11 +19,39 @@ public class HomeController : Controller
 
         if (string.IsNullOrEmpty(username))
         {
-            // якщо користувач НЕ авторизований, перенаправити на Login
             return RedirectToAction("Login", "Auth");
         }
         return View();
     }
+
+    [HttpGet]
+    public IActionResult UserInfoInput()
+    {
+        var username = HttpContext.Session.GetString("Username");
+
+        if (string.IsNullOrEmpty(username))
+        {
+            return RedirectToAction("Login", "Auth");
+        }
+
+        ViewBag.Username = username;
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult SubmitField(string userInput)
+    {
+        var username = HttpContext.Session.GetString("Username");
+
+        if (string.IsNullOrEmpty(username))
+        {
+            return RedirectToAction("Login", "Auth");
+        }
+
+        ViewBag.SubmittedValue = userInput;
+        return View("SubmissionResult");
+    }
+
 
     public IActionResult Privacy()
     {

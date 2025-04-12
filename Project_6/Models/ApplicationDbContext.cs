@@ -21,5 +21,6 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
     public DbSet<User> Users { get; set; }
-    public DbSet <RegistrationToken> RegistrationTokens { get; set; }
+    public DbSet<UserInfo> UserInfos { get; set; }
+    public DbSet<RegistrationToken> RegistrationTokens { get; set; }
 }

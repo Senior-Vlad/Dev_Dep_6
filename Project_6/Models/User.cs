@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Project_6.Models;
 
 public class User
 {
@@ -12,5 +13,6 @@ public class User
     public string Password { get; set; }
     [Required]
     public string Role { get; set; }
+    public virtual ICollection<UserInfo> UserInfos { get; set; }
 }
 

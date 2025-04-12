@@ -38,7 +38,7 @@ public class AuthController : Controller
         var user = _context.Users.FirstOrDefault(u => u.Email == email);
         var user_token = _context.RegistrationTokens.FirstOrDefault(u => u.Token == token);
 
-        if (user == null||user_token==null)
+        if (user == null || user_token == null)
         {
             ViewBag.Error = "Invalid token or email.";
             return View("Recover");
@@ -61,7 +61,7 @@ public class AuthController : Controller
     {
         var user = _context.Users.FirstOrDefault(u => u.Email == email);
         var user_token = _context.RegistrationTokens.FirstOrDefault(u => u.Token == token);
-        if (user == null||user_token==null)
+        if (user == null || user_token == null)
         {
             ViewBag.Error = "Invalid token or email.";
             return View("Recover");
@@ -96,11 +96,19 @@ public class AuthController : Controller
         var user = _context.Users.FirstOrDefault(u => u.Username == username && u.Password == hashedPassword);
         if (user != null)
         {
-            // HttpContext.Session.SetString("Username", user.Username);
-            // Creating a session with the user's role
+            HttpContext.Session.SetInt32("UserId", user.Id);
             HttpContext.Session.SetString("Username", user.Username);
+            // Creating a session with the user's role
             HttpContext.Session.SetString("Role", user.Role ?? "user");//?
+            var sessionIdUser = HttpContext.Session.GetInt32("UserId");
+            var userIdExist = _context.UserInfos.FirstOrDefault(u => u.UserId == sessionIdUser);
+            Console.WriteLine($"userIdExist: {userIdExist}");
+            if (userIdExist == null)
+            {
+                return RedirectToAction("UserInfoInput", "Home");
+            }
             return RedirectToAction("Index", "Home");
+
         }
         ViewBag.Error = "Invalid username or password";
         return View();

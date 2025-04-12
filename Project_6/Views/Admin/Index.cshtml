@@ -2,24 +2,112 @@
     ViewData["Title"] = "Admin Panel";
 }
 
-<h2>Admin Panel</h2>
+<h2 class="text-center">Admin Panel</h2>
 
-<form method="post" asp-action="CreateToken">
-    <input type="text" name="token" placeholder="Enter new token" required />
-    <select name="role" required>
-        <option value="user">User</option>
-        <option value="secretariate">Secretariate</option>
-        <option value="admin">Admin</option>
-        <!--superadmin can border assigned only through database  -->
-    </select>
-    <button type="submit">Create Token</button>
+<form method="post" asp-action="CreateToken" class="form-container">
+    <div class="form-group">
+        <label for="token">Token:</label>
+        <input type="text" name="token" id="token" placeholder="Enter new token" required />
+    </div>
+
+    <div class="form-group">
+        <label for="role">Role:</label>
+        <select name="role" id="role" required>
+            <option value="student">Student</option>
+            <option value="secretariate">Secretariate</option>
+            <option value="admin">Admin</option>
+            <!-- Superadmin can only be assigned via the database -->
+        </select>
+    </div>
+
+    <button type="submit" class="btn-submit">Create Token</button>
 </form>
 
 @if (ViewBag.Message != null)
 {
-    <p style="color: green;">@ViewBag.Message</p>
+    <p class="alert-success">@ViewBag.Message</p>
 }
+
 @if (ViewBag.Error != null)
 {
-    <p style="color: red;">@ViewBag.Error</p>
+    <p class="alert-error">@ViewBag.Error</p>
 }
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .form-container {
+        width: 50%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .form-group select {
+        background-color: #f9f9f9;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        background-color: #880808;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+        background-color: #370870;
+    }
+
+    .alert-success {
+        text-align: center;
+        color: green;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .alert-error {
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>

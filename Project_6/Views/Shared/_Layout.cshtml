@@ -14,53 +14,75 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="navbar">
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Project_6</a>
-            <button class="navbar-toggler" id="toggleNavbar">
-                <img src="~/img/menu.png" alt="Menu" width="30" height="30">
-            </button>
+    @if (Context.Session.GetString("Username") == null)
+    {
+        <div style="text-align:center">
+            <h1 style="color:#880808; margin-top: 30px;"><b>UniCom</b></h1>
+        </div>
+    }
 
-            <ul class="navbar-menu" id="navbarContent">
-                <li class="nav-item">
-                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
+    @if (Context.Session.GetString("Username") != null)
+    {
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">UniCom</a>
 
-                @if (Context.Session.GetString("Username") != null)
-                {
-                    var role = Context.Session.GetString("Role");
+                <ul class="navbar-menu" id="navbarContent">
+                    @{
+                        var role = Context.Session.GetString("Role");
+                    }
 
                     @if (role == "admin" || role == "superadmin")
                     {
-
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                        </li>
                     }
 
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
-                    </li>
-                }
-                else
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Auth" asp-action="Login">Login</a>
-                    </li>
-                }
-            </ul>
-        </div>
-    </nav>
+                    @if (role == "student")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                        </li>
+                    }
+
+                    @if (role == "secretariate")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+        </nav>
+    }
 
     <div style="width: 100vw;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 
 </html>

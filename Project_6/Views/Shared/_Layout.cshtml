@@ -9,6 +9,9 @@
     <title>@ViewData["Title"] - Project_6</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-RXf+QSDCUQs6cD1vugFfC4IBhO6Ih31XAh2nD4jldC5k0Ekl7tqS1QXgBkT8CNuhxq+sOKF0RxM0TRGvZ7S5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Project_6.styles.css" asp-append-version="true" />
 </head>
@@ -34,9 +37,9 @@
 
                     @if (role == "admin" || role == "superadmin")
                     {
-                        <li class="nav-item">
+                        @* <li class="nav-item">
                             <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a>
-                        </li>
+                        </li> *@
 
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Admin" asp-action="Home">Home</a>

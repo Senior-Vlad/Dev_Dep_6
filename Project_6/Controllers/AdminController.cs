@@ -78,6 +78,7 @@ public class AdminController : Controller
             ViewBag.Error = "Token already exists!";
         }
 
+
         return View("Index");
     }
 
@@ -86,5 +87,57 @@ public class AdminController : Controller
         return View("Index");
     }
 
+    public IActionResult StudentList()
+    {
+        var username = HttpContext.Session.GetString("Username");
+        var user = _context.Users.FirstOrDefault(u => u.Username == username);
 
+        var checkResult = RoleCheck(username);
+
+        if (checkResult != null)
+        {
+            return checkResult;
+        }
+        var students = _context.UserInfos.Where(info => info.User.Role == "student")
+        .Select(info => new
+        {
+            Id = info.Id,
+            FirstName = info.FirstName,
+            LastName = info.LastName,
+            Username = info.User.Username,
+            Email = info.Email,
+            Role = info.User.Role
+        }).ToList();
+        ViewBag.Students = students;
+        return View(students);
+    }
+
+    private IActionResult RoleCheck(string username)
+    {
+        var user = _context.Users.FirstOrDefault(u => u.Username == username);
+
+        if (user == null || (user.Role != "admin" && user.Role != "superadmin"))
+        {
+            return RedirectToAction("Login", "Auth");
+        }
+
+        if (user.Role != "admin")
+        {
+            ViewBag.Error = "Insufficient rights to assign admin roles.";
+            return View("Index");
+        }
+        return null;
+    }
+
+    public IActionResult DeleteStudent(int Id)
+    {
+        var userExist = _context.UserInfos.FirstOrDefault(s => s.Id == Id);
+        if (userExist != null)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == userExist.Id);
+            _context.UserInfos.Remove(userExist);
+            _context.SaveChanges();
+        }
+        return RedirectToAction("StudentList");
+    }
 }

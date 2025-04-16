@@ -103,11 +103,19 @@ public class AuthController : Controller
             var sessionIdUser = HttpContext.Session.GetInt32("UserId");
             var userIdExist = _context.UserInfos.FirstOrDefault(u => u.UserId == sessionIdUser);
             Console.WriteLine($"userIdExist: {userIdExist}");
-            if (userIdExist == null)
+            if (user.Role == "admin")
+            {
+                return RedirectToAction("Home", "Admin");
+            }
+            if (userIdExist == null && user.Role == "Student" || user.Role == "Secretariate")
             {
                 return RedirectToAction("UserInfoInput", "Home");
             }
-            return RedirectToAction("Index", "Home");
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
 
         }
         ViewBag.Error = "Invalid username or password";

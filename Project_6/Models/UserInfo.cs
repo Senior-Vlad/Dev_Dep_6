@@ -24,10 +24,8 @@ namespace Project_6.Models
 
         public string Major { get; set; }
 
-        // Optional: DateTime CreationDate if you want to track when the information was added
         public DateTime CreationDate { get; set; } = DateTime.Now;
 
-        // Navigation property to User model
         public virtual User User { get; set; }
         public override string ToString()
         {

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Project_6.jktinqqxbh.bundle.scp.css"
     },
     {
+      "Id": "/Users/user/Downloads/Dev_Dep_6/Project_6/wwwroot/certificates/DigiCertGlobalRootG2.crt.pem",
+      "PackagePath": "staticwebassets/certificates/DigiCertGlobalRootG2.crt.pem"
+    },
+    {
       "Id": "/Users/user/Downloads/Dev_Dep_6/Project_6/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

@@ -8,129 +8,120 @@
 
 <style>
     html,
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
 
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    .chat-container {
-        padding-top: 100px;
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-    }
+.chat-container {
+    padding-top: 100px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
 
-    @*
-    .sidebar {
-        width: 15%;
-        background-color: #2c3e50;
-        color: white;
-        padding: 10px;
-        overflow-y: auto;
-    } *@
+.conversation-list {
+    width: 25%;
+    background-color: #7d7deb; /* jasna lawenda */
+    color: white;
+    padding: 30px 10px 10px 10px;
+    overflow-y: auto;
+}
 
-    .conversation-list {
-        width: 25%;
-        background-color: #34495e;
-        color: white;
-        padding-top: 30px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        overflow-y: auto;
-    }
+.chat-area {
+    width: 75%;
+    background-color: #f4f4f8; /* szarość */
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    .chat-area {
-        width: 75%;
-        background-color: #ecf0f1;
-        padding: 70px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+.message-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
 
-    .message-box {
-        flex-grow: 1;
-        overflow-y: auto;
-        padding: 10px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        margin-bottom: 10px;
-    }
+.chat-message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #e8e8fc; /* jasna lawenda */
+}
 
-    .chat-message {
-        margin: 5px 0;
-        padding: 8px;
-        border-radius: 4px;
-        background-color: #f9f9f9;
-    }
+.chat-message strong {
+    color: #5f5fe8; /* ciemniejsza lawenda */
+}
 
-    .chat-message strong {
-        color: #2c3e50;
-    }
+.input-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #d9d9f3;
+    border-top: 1px solid #b0b0e0;
+}
 
-    .input-box {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        background-color: #bdc3c7;
-        border-top: 1px solid #7f8c8d;
-    }
+input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #a6a6d6;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+    background-color: #fdfdff;
+}
 
-    input[type="text"] {
-        flex-grow: 1;
-        padding: 8px;
-        border: 1px solid #7f8c8d;
-        border-radius: 4px;
-        margin-right: 10px;
-        font-size: 14px;
-    }
+button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #5f5fe8; /* ciemna lawenda */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
 
-    button {
-        padding: 8px 12px;
-        border: none;
-        background-color: #2c3e50;
-        color: white;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-    }
+button:hover {
+    background-color: #4c4ccc;
+}
 
-    button:hover {
-        background-color: #1a252f;
-    }
+.sidebar h3,
+.conversation-list h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
 
-    .sidebar h3,
-    .conversation-list h3 {
-        margin: 0 0 10px 0;
-        font-size: 18px;
-    }
+.conversation-item {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #6f6fdf; /* pośredni lawendowy */
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
 
-    .conversation-item {
-        padding: 8px;
-        margin: 5px 0;
-        background-color: #465c71;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+.conversation-item:hover {
+    background-color: #5f5fe8; /* ciemniejsza lawenda */
+}
 
-    .conversation-item:hover {
-        background-color: #566c86;
-    }
+.chat-container > div {
+    flex-shrink: 0;
+}
 
-    .chat-container>div {
-        flex-shrink: 0;
-    }
 </style>
 
 <div class="chat-container">
@@ -146,9 +137,9 @@
 
     <!-- Conversation List -->
     <div class="conversation-list">
-        <h3>Conversations</h3>
+        <h3>Rozmowy</h3>
         <ul style="list-style: none; padding: 0;">
-            <li class="conversation-item" onclick="loadConversation('1')">Group Chat</li>
+            <li class="conversation-item" onclick="loadConversation('1')">Czat grupowy</li>
             <li class="conversation-item" onclick="loadConversation('2')">Alice</li>
             <li class="conversation-item" onclick="loadConversation('3')">Bob</li>
         </ul>
@@ -161,9 +152,9 @@
             <p class="chat-message"><strong>User:</strong> Hi there!</p>
         </div>
         <div class="input-box">
-            <input type="text" id="messageInput" placeholder="Type a message..." aria-label="Message input"
+            <input type="text" id="messageInput" placeholder="Wyślij wiadomość..." aria-label="Message input"
                 onkeypress="handleKeyPress(event)">
-            <button type="button" onclick="sendMessage()">Send</button>
+            <button type="button" onclick="sendMessage()">Wyślij</button>
         </div>
     </div>
 </div>

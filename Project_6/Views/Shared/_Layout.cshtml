@@ -6,7 +6,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Project_6</title>
+    <title>@ViewData["Title"] UniCom</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -30,7 +30,9 @@
     {
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">UniCom</a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+    <img src="~/img/unicom_logo_big.png" alt="UniCom Logo" style="height: 40px;">
+    </a>
 
                 <ul class="navbar-menu" id="navbarContent">
                     @{
@@ -44,23 +46,23 @@
                         </li> *@
 
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Admin" asp-action="Home">Home</a>
+                            <a class="nav-link" asp-controller="Admin" asp-action="Home">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
                         </li>
                     }
 
                     @if (role == "student")
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Strona główna</a>
                         </li>
                         <li>
-                            <a class="nav-link" asp-controller="Student" asp-action="MyInfo">My inforamtion</a>
+                            <a class="nav-link" asp-controller="Student" asp-action="MyInfo">Mój profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
                         </li>
 
                     }
@@ -68,10 +70,10 @@
                     @if (role == "secretariate")
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
                         </li>
                     }
 

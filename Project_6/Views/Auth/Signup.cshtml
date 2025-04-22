@@ -13,13 +13,19 @@
         background: #fff;
         width: 450px;
         padding: 1.5rem;
-        margin: 50px auto;
+        margin: 20px auto;
         border-radius: 10px;
-        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+        border: 1px solid #5f5fe8;
+        box-shadow: 0 10px 20px rgba(0, 1, 1, 0.2);
     }
 
     form {
         margin: 0 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #5f5fe8;
     }
 
     .form-title {
@@ -35,7 +41,7 @@
         width: 100%;
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid #757575;
+        border-bottom: 1px solid #5f5fe8;
         padding-left: 1.5rem;
         font-size: 15px;
     }
@@ -43,6 +49,7 @@
     .input-group {
         padding: 1% 0;
         position: relative;
+        margin-top: 5px;
     }
 
     .input-group i {
@@ -64,7 +71,7 @@
     input:focus {
         background-color: transparent;
         outline: transparent;
-        border-bottom: 2px solid hsl(327, 90%, 28%);
+        border-bottom: 2px solid #5f5fe8;
     }
 
     input::placeholder {
@@ -72,7 +79,7 @@
     }
 
     label {
-        color: #757575;
+        color: #5f5fe8;
         position: relative;
         left: 1.2em;
         top: -1.3em;
@@ -83,7 +90,7 @@
     input:focus~label,
     input:not(:placeholder-shown)~label {
         top: -3em;
-        color: hsl(327, 90%, 28%);
+        color: #5f5fe8;
         font-size: 15px;
     }
 
@@ -199,26 +206,26 @@
         <div class="input-group">
             <i class="fas fa-user"></i>
             <input type="text" name="username" id="username" placeholder="Username" required>
-            <label for="username">Username</label>
+            <label for="username">Nazwa użytkownika</label>
         </div>
         <div class="input-group">
             <i class="fas fa-lock"></i>
             <input type="password" name="password" id="password" placeholder="Password" required>
-            <label for="password">Password</label>
+            <label for="password">Hasło</label>
         </div>
         <div class="input-group">   
             <i class="fas fa-key"></i>
             <input type="text" name="token" id="token" placeholder="Registration Token" required />
-            <label for="token">Registration Token</label>
+            <label for="token">Token rejestracyjny</label>
         </div>
         <p class="recover">
-            <a href="#">Recover Password</a>
+            <a href="#">Odzyskaj hasło</a>
         </p>
-        <input type="submit" class="btn" value="Sign Up" name="signUp">
+        <input type="submit" class="btn" value="Zarejestruj się" name="signUp">
     </form>
 
     <div class="links">
-        <p>Already have an account?</p>
-        <a href="/#" id="signInLink">Sign In</a>
+        <p>Masz już konto?</p>
+        <a href="/#" id="signInLink">Zaloguj się</a>
     </div>
 </div>

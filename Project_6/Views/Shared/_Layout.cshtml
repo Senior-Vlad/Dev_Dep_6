@@ -19,9 +19,11 @@
 <body>
     @if (Context.Session.GetString("Username") == null)
     {
-        <div style="text-align:center">
-            <h1 style="color:#880808; margin-top: 30px;"><b>UniCom</b></h1>
-        </div>
+
+    <div style="text-align:center">
+    <img src="~/img/unicom_logo_big.png" alt="UniCom Logo" style="width:300px; margin-top: 40px;" />
+    </div>
+
     }
 
     @if (Context.Session.GetString("Username") != null)

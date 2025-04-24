@@ -96,6 +96,13 @@ public class AuthController : Controller
         var user = _context.Users.FirstOrDefault(u => u.Username == username && u.Password == hashedPassword);
         if (user != null)
         {
+            var userInfoId = _context.UserInfos.FirstOrDefault(u => u.UserId == user.Id);
+            if (userInfoId != null)
+            {
+                HttpContext.Session.SetString("FirstName", userInfoId.FirstName);
+                HttpContext.Session.SetString("LastName", userInfoId.LastName);
+            }
+
             HttpContext.Session.SetInt32("UserId", user.Id);
             HttpContext.Session.SetString("Username", user.Username);
             // Creating a session with the user's role

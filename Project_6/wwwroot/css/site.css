@@ -58,7 +58,8 @@ html {
 
 .recover .btn:hover {
   background-color: rgb(50, 50, 110);
-  visibility: 0.5;/*???*/
+  visibility: 0.5;
+  /*???*/
   /* Трохи темніше при наведенні */
 }
 

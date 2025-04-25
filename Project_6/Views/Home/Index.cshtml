@@ -4,8 +4,6 @@
     ViewData["Title"] = "Chat";
 }
 
-
-
 <style>
     html,
     body {
@@ -64,6 +62,12 @@
         border-radius: 4px;
         background-color: #e8e8fc;
         /* jasna lawenda */
+    }
+
+    .chat-message em {
+        color: #a6a6d6;
+        font-size: 0.8em;
+        margin-left: 10px;
     }
 
     .chat-message strong {
@@ -130,6 +134,8 @@
     }
 </style>
 
+
+
 <div class="chat-container">
     <!-- Conversation List -->
     <div class="conversation-list">
@@ -157,6 +163,7 @@
     </div>
 </div>
 
+
 @section Scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
     <script>
@@ -167,28 +174,74 @@
 
             let currentGroup = "General";
 
+            // Start the SignalR connection
             connection.start().then(() => {
                 console.log("SignalR connected");
                 joinGroup(currentGroup);
             }).catch(err => console.error(err.toString()));
 
+            // Handle real-time messages
+            connection.on("ReceiveMessage", function (user, message, messageId, sentAt) {
+                console.log("Real-time message SentAt:", sentAt); // Log for debugging
+                const messageBox = document.getElementById("messageBox");
+                const newMessage = document.createElement("p");
+                newMessage.classList.add("chat-message");
+                if (user === "System") {
+                    newMessage.innerHTML = `<em>${message}</em>`;
+                } else {
+                    // Validate and format the timestamp
+                    const formattedTime = sentAt && !isNaN(new Date(sentAt))
+                        ? new Date(sentAt).toLocaleString()
+                        : "Unknown time";
+                    newMessage.innerHTML = `<strong>${user}:</strong> ${message} <em>(${formattedTime})</em>`;
+                }
+                messageBox.appendChild(newMessage);
+                messageBox.scrollTop = messageBox.scrollHeight;
+            });
+
+            // Handle historical messages from the database
+            connection.on("ReceiveAllMessages", function (messages) {
+                console.log("Historical messages:", messages); // Log for debugging
+                const messageBox = document.getElementById("messageBox");
+                messageBox.innerHTML = `<p class="chat-message"><em>You joined "${currentGroup}"</em></p>`;
+                messages.forEach(m => {
+                    const newMessage = document.createElement("p");
+                    newMessage.classList.add("chat-message");
+
+                    const formattedTime = m.sentAt && !isNaN(new Date(m.sentAt))
+                        ? new Date(m.sentAt).toLocaleString()
+                        : "Unknown time";
+
+                    newMessage.innerHTML = `<strong>${m.user}:</strong> ${m.content} <em>(${formattedTime})</em>`;
+                    messageBox.appendChild(newMessage);
+                });
+
+                messageBox.scrollTop = messageBox.scrollHeight;
+            });
+
+            // Join a group
             function joinGroup(groupName) {
                 connection.invoke("JoinGroup", groupName)
-                    .then(() => console.log(`Joined group: ${groupName}`))
+                    .then(() => {
+                        console.log(`Joined group: ${groupName}`);
+                        connection.invoke("GetMessagesForGroup", groupName)
+                            .catch(err => console.error(err.toString()));
+                    })
                     .catch(err => console.error(err.toString()));
             }
+
+            // Handle group selection
             window.joinSelectedGroup = function (groupName) {
                 currentGroup = groupName;
                 joinGroup(currentGroup);
-                document.getElementById("messageBox").innerHTML = `<p class="chat-message"><em>You joined "${currentGroup}"</em></p>`;
             };
+
+            // Create a new group
             window.createGroup = function () {
                 const input = document.getElementById("newGroupInput");
                 const groupName = input.value.trim();
-
                 if (groupName === "") return;
 
-                // Create a new <li> and append it to the group list
                 const list = document.querySelector(".conversation-list ul");
                 const li = document.createElement("li");
                 li.className = "conversation-item";
@@ -198,30 +251,11 @@
                 };
                 list.appendChild(li);
 
-                // Clear input
                 input.value = "";
-
-                // Auto-join the new group
                 joinSelectedGroup(groupName);
             };
 
-
-            connection.on("ReceiveMessage", function (user, message) {
-                const messageBox = document.getElementById("messageBox");
-                const newMessage = document.createElement("p");
-                newMessage.classList.add("chat-message");
-
-                if (user === "System") {
-                    newMessage.innerHTML = `<em>${message}</em>`;
-                } else {
-                    newMessage.innerHTML = `<strong>${user}:</strong> ${message}`;
-                }
-
-                messageBox.appendChild(newMessage);
-                messageBox.scrollTop = messageBox.scrollHeight;
-            });
-
-
+            // Send a message
             document.getElementById("sendBtn").addEventListener("click", function () {
                 const input = document.getElementById("messageInput");
                 const message = input.value.trim();
@@ -232,6 +266,7 @@
                 }
             });
 
+            // Send message on Enter key
             document.getElementById("messageInput").addEventListener("keypress", function (event) {
                 if (event.key === "Enter") {
                     document.getElementById("sendBtn").click();

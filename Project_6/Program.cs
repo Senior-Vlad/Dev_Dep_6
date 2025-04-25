@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Users.user.Downloads.Dev_Dep_6.Project_6.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
@@ -54,6 +55,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IMessageService, MessageService>();
 // builder.Services.AddSession();
 var app = builder.Build();
 // app.UseSession();

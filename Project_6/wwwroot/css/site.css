@@ -42,14 +42,12 @@ html {
 
 .recover {
   display: block;
-  /* Переконайся, що він не display: none */
   text-align: center;
   margin-top: 10px;
 }
 
 .recover .btn {
   background-color: rgb(125, 125, 235);
-  /* Зміни на свій колір */
   color: white;
   padding: 8px 15px;
   border-radius: 5px;
@@ -78,7 +76,6 @@ html {
 .navbar-menu {
   display: flex;
   gap: 0px;
-  /* Проміжок між кнопками */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -86,7 +83,6 @@ html {
 
 .navbar-visible {
   display: flex;
-  /* Показуємо меню при натисканні */
 }
 
 .navbar-menu li {
@@ -103,7 +99,6 @@ html {
 
 .navbar-menu a:hover {
   color: #5f5fe8;
-  /* Жовтий при наведенні */
 }
 
 

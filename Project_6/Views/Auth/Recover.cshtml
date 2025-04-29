@@ -2,43 +2,48 @@
     ViewData["Title"] = "Recover";
 }
 
-<h2>Recover Account</h2>
+<div class="recover-container">
+    <div class="recover-area">
+        <div class="recover-box">
+            <h2>Odzyskaj konto</h2>
+            <div style="text-align: center;">
+                <button id="forgotPasswordBtn" class="btn btn-primary">Zapomniałem hasła</button>
+                <button id="forgotUsernameBtn" class="btn btn-secondary">Zapomniałem nazwy użytkownika</button>
+            </div>
+        </div>
 
-<div>
-    <button id="forgotPasswordBtn" class="btn btn-primary">Forgot Password</button>
-    <button id="forgotUsernameBtn" class="btn btn-secondary">Forgot Username</button>
-</div>
+        <!-- Formularz do resetowania hasła -->
+        <div id="passwordForm" class="recover-box" style="display: none;">
+            <h4>Resetuj hasło</h4>
+            <form method="post" asp-action="ResetPassword">
+                <div class="form-group">
+                    <label for="token">Token:</label>
+                    <input type="text" class="form-control" name="token" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Zarejestrowany email:</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
 
-<!-- Форма для відновлення пароля -->
-<div id="passwordForm" style="display: none;">
-    <h4>Reset Password</h4>
-    <form method="post" asp-action="ResetPassword">
-        <div class="form-group">
-            <label for="token">Token:</label>
-            <input type="text" class="form-control" name="token" required>
+        <!-- Formularz do odzyskiwania nazwy użytkownika -->
+        <div id="usernameForm" class="recover-box" style="display: none;">
+            <h4>Odzyskaj nazwę użytkownika</h4>
+            <form method="post" asp-action="RecoverUsername">
+                <div class="form-group">
+                    <label for="token">Token:</label>
+                    <input type="text" class="form-control" name="token" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Zarejestrowany email:</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+                <button type="submit">Wyślij</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="email">Registered Email:</label>
-            <input type="email" class="form-control" name="email" required>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-</div>
-
-<!-- Форма для відновлення username -->
-<div id="usernameForm" style="display: none;">
-    <h4>Recover Username</h4>
-    <form method="post" asp-action="RecoverUsername">
-        <div class="form-group">
-            <label for="token">Token:</label>
-            <input type="text" class="form-control" name="token" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Registered Email:</label>
-            <input type="email" class="form-control" name="email" required>
-        </div>
-        <button type="submit" class="btn btn-info">Submit</button>
-    </form>
+    </div>
 </div>
 
 <script>
@@ -52,3 +57,125 @@
         document.getElementById("passwordForm").style.display = "none";
     });
 </script>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .recover-container {
+        padding-top: 100px;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f8; /* szarość tła */
+    }
+
+    .recover-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:30px;
+    }
+
+    .recover-box {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    h2, h4 {
+        color: #5f5fe8; 
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        color: #5f5fe8;
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #a6a6d6;
+        border-radius: 4px;
+        font-size: 14px;
+        background-color: #fdfdff;
+    }
+
+    button {
+        padding: 8px 12px;
+        border: none;
+        background-color: #5f5fe8; 
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    button:hover {
+        background-color: #4c4ccc;
+    }
+
+    .btn-primary {
+        background-color: #5f5fe8;
+    }
+
+    .btn-primary:hover {
+        background-color: #4c4ccc;
+    }
+
+    .btn-secondary {
+        background-color: #6f6fdf; 
+    }
+
+    .btn-secondary:hover {
+        background-color: #5f5fe8;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+    }
+
+    .btn-info:hover {
+        background-color: #138496;
+    }
+
+    .recover-box form {
+        display: flex;
+        flex-direction: column;
+    }
+</style>

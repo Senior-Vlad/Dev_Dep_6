@@ -4,6 +4,7 @@
     ViewData["Title"] = "Chat";
 }
 
+<link rel="stylesheet" href="~/css/chat.css" />
 <style>
     html,
     body {
@@ -30,16 +31,17 @@
     .conversation-list {
         width: 25%;
         background-color: #7d7deb;
-        /* jasna lawenda */
+   
         color: white;
         padding: 70px 10px 10px 10px;
         overflow-y: auto;
+  
     }
 
     .chat-area {
         width: 75%;
         background-color: #f4f4f8;
-        /* szarość */
+
         padding: 70px;
         display: flex;
         flex-direction: column;
@@ -61,7 +63,7 @@
         padding: 8px;
         border-radius: 4px;
         background-color: #e8e8fc;
-        /* jasna lawenda */
+      
     }
 
     .chat-message em {
@@ -72,7 +74,7 @@
 
     .chat-message strong {
         color: #5f5fe8;
-        /* ciemniejsza lawenda */
+        
     }
 
     .input-box {
@@ -80,7 +82,8 @@
         align-items: center;
         padding: 10px;
         background-color: #d9d9f3;
-        border-top: 1px solid #b0b0e0;
+        border-radius: 4px;
+        border: 1px solid #b0b0e0;
     }
 
     input[type="text"] {
@@ -97,7 +100,7 @@
         padding: 8px 12px;
         border: none;
         background-color: #5f5fe8;
-        /* ciemna lawenda */
+       
         color: white;
         border-radius: 4px;
         cursor: pointer;
@@ -118,7 +121,7 @@
         padding: 8px;
         margin: 5px 0;
         background-color: #6f6fdf;
-        /* pośredni lawendowy */
+        
         border-radius: 4px;
         cursor: pointer;
         color: white;
@@ -126,12 +129,14 @@
 
     .conversation-item:hover {
         background-color: #5f5fe8;
-        /* ciemniejsza lawenda */
+      
     }
 
     .chat-container>div {
         flex-shrink: 0;
     }
+
+
 </style>
 
 
@@ -139,15 +144,18 @@
 <div class="chat-container">
     <!-- Conversation List -->
     <div class="conversation-list">
-        <h3>Rozmowy</h3>
+
+         <h3>
+            Rozmowy
+        </h3>
         <div style="margin-bottom: 10px;">
-            <input type="text" id="newGroupInput" placeholder="New group name..." />
-            <button type="button" onclick="createGroup()">Create</button>
+            <input type="text" id="newGroupInput" placeholder="Nazwa nowej grupy..." />
+            <button type="button" onclick="createGroup()">Utwórz</button>
         </div>
         <ul style="list-style: none; padding: 0;">
-            <li class="conversation-item" onclick="joinSelectedGroup('General')">General</li>
-            <li class="conversation-item" onclick="joinSelectedGroup('Students')">Students</li>
-            <li class="conversation-item" onclick="joinSelectedGroup('Secretariate')">Secretariate</li>
+            <li class="conversation-item" onclick="joinSelectedGroup('Czat główny')">Czat główny</li>
+            <li class="conversation-item" onclick="joinSelectedGroup('Studenci')">Studenci</li>
+            <li class="conversation-item" onclick="joinSelectedGroup('Dziekanat')">Dziekanat</li>
         </ul>
     </div>
 
@@ -172,7 +180,7 @@
                 .withUrl("/chatHub")
                 .build();
 
-            let currentGroup = "General";
+            let currentGroup = "Czat główny";
 
             // Start the SignalR connection
             connection.start().then(() => {
@@ -182,7 +190,7 @@
 
             // Handle real-time messages
             connection.on("ReceiveMessage", function (user, message, messageId, sentAt) {
-                console.log("Real-time message SentAt:", sentAt); // Log for debugging
+                console.log("Wiadomość w czasie rzeczywistym wysłana o:", sentAt); // Log for debugging
                 const messageBox = document.getElementById("messageBox");
                 const newMessage = document.createElement("p");
                 newMessage.classList.add("chat-message");
@@ -203,14 +211,14 @@
             connection.on("ReceiveAllMessages", function (messages) {
                 console.log("Historical messages:", messages); // Log for debugging
                 const messageBox = document.getElementById("messageBox");
-                messageBox.innerHTML = `<p class="chat-message"><em>You joined "${currentGroup}"</em></p>`;
+                messageBox.innerHTML = `<p class="chat-message"><em>Dołączono do "${currentGroup}"</em></p>`;
                 messages.forEach(m => {
                     const newMessage = document.createElement("p");
                     newMessage.classList.add("chat-message");
 
                     const formattedTime = m.sentAt && !isNaN(new Date(m.sentAt))
                         ? new Date(m.sentAt).toLocaleString()
-                        : "Unknown time";
+                        : "Czas nieznany";
 
                     newMessage.innerHTML = `<strong>${m.user}:</strong> ${m.content} <em>(${formattedTime})</em>`;
                     messageBox.appendChild(newMessage);
@@ -223,7 +231,7 @@
             function joinGroup(groupName) {
                 connection.invoke("JoinGroup", groupName)
                     .then(() => {
-                        console.log(`Joined group: ${groupName}`);
+                        console.log(`Dołączono do: ${groupName}`);
                         connection.invoke("GetMessagesForGroup", groupName)
                             .catch(err => console.error(err.toString()));
                     })
@@ -273,5 +281,7 @@
                 }
             });
         });
+
+    
     </script>
 }

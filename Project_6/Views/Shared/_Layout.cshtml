@@ -62,9 +62,21 @@
                             <a class="nav-link" asp-controller="Student" asp-action="MyInfo">Mój profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
+                            <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a> 
                         </li>
 
+                         <li class="nav-item" style="margin-left: 40px;"><span class="notification-icon">
+                <img src="~/img/notification-bell.png" style="width: 25px; height: 25px;" alt="Notification Bell"/>
+                <div class="notification-tooltip" id="notificationTooltip">
+                    <p>Szanowni Użytkownicy,<br><br>
+
+Dnia 20.04.2025 w godzinach 00:00-3:00 zostanie przeprowadzona przerwa techniczna systemu UniCom. System w tym czasie będzie niedostępny.
+<br><br>
+<p><em>Dodano przez: Administrator <br>@DateTime.Now</em></p>
+                    <button onclick="markAsRead()">Przeczytane</button>
+                </div>
+            </span>
+</li>
                     }
 
                     @if (role == "secretariate")
@@ -89,6 +101,23 @@
         </main>
     </div>
 
+   
+        <script>
+        document.querySelector(".notification-icon").addEventListener("click", function (e) {
+            e.preventDefault();
+            const tooltip = document.getElementById("notificationTooltip");
+            const iconRect = this.getBoundingClientRect();
+            tooltip.style.top = `${iconRect.bottom + window.scrollY + 32}px`;
+            tooltip.style.left = `${iconRect.left + window.scrollX - 180 }px`;
+            tooltip.style.display = tooltip.style.display === "block" ? "none" : "block";
+        });
+
+        function markAsRead() {
+            const tooltip = document.getElementById("notificationTooltip");
+            tooltip.style.display = "none";
+        }
+    </script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -97,3 +126,56 @@
 
 
 </html>
+<style>
+/*dla testowego tooltipa(do zmiany)*/
+.notification-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        display: inline-block;
+       
+    }
+
+    .notification-icon img {
+        margin-top:3px;
+        transition: opacity 0.2s;
+    }
+
+    .notification-icon:hover img {
+        opacity: 0.7;
+    }
+
+
+    .notification-tooltip {
+        display: none;
+        position: fixed;
+        background-color: #fdfdff;
+        border: 1px solid #a6a6d6;
+        border-radius: 4px;
+        padding: 10px;
+        width: 200px;
+        color: #5f5fe8;
+        font-size: 13px;
+        z-index: 1001;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .notification-tooltip p {
+        margin: 0 0 8px 0;
+    }
+
+    .notification-tooltip button {
+        padding: 6px 10px;
+        background-color: #5f5fe8;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .notification-tooltip button:hover {
+        background-color: #4c4ccc;
+    }
+</style>

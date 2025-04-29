@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xfyc0zfbmt</Fingerprint>
-      <Integrity>XVUGQ7ZADUNBVQqbFK7dC0+sM65d632CR7a095nBMwY=</Integrity>
+      <Fingerprint>dm1ynu40lp</Fingerprint>
+      <Integrity>tSsKEXs4laRf1mMG6qDOQLmzRmzgzw7+ZuSQ3UUlkio=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\certificates\DigiCertGlobalRootG2.crt.pem'))</OriginalItemSpec>

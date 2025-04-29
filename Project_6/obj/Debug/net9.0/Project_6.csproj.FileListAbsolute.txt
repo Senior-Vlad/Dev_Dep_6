@@ -464,7 +464,6 @@ D:/github/Dev_Dep_6/Dev_Dep_6-1/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/
 /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/bundle/Project_6.styles.css
 /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/scopedcss/projectbundle/Project_6.bundle.scp.css
-/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-2s3j2n9prl.gz
 /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/q42kdwbdgd-61n19gt1b8.gz
 /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/ut62l2g56n-77jc4tlpld.gz
 /Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/0juescxj5k-bqjiyaj88i.gz
@@ -723,3 +722,4 @@ D:/github/Dev_Dep_6/Dev_Dep_6-1/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/
 /Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/Project_6.genruntimeconfig.cache
 /Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/ref/Project_6.dll
 /Users/user/Downloads/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-8lfjbs8h85.gz
+/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/Debug/net9.0/compressed/knost45aie-8lfjbs8h85.gz

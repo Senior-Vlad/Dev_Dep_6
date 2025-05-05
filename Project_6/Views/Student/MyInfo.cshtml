@@ -40,7 +40,7 @@
             document.getElementById('cancelBtn').classList.add('d-none');
         }
     </script>
-    </script>
+    <!--</script>-->
 }
 
 <div class="container mt-5" style="max-width: 600px;">
@@ -48,6 +48,10 @@
 
     @if (Model != null)
     {
+        <a href="/Student/Zgloszenie" class="btn btn-sm btn-primary"
+            style="position:absolute; top:60px; right:40px; z-index:1000;">
+            Zgłosić
+        </a>
         <form asp-action="UpdateStudentInfo" asp-controller="Student" method="post"
             class="bg-light p-4 shadow rounded info-form">
             <input type="hidden" name="Id" value="@Model.Id" />

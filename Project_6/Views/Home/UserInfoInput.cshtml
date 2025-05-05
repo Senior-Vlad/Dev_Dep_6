@@ -1,43 +1,59 @@
 @model Project_6.Models.UserInfoModel
 
 @{
-ViewData["Title"] = "Fill Out User Info";
+    ViewData["Title"] = "Fill Out User Info";
 }
 
 <h2 class="text-center">Fill Out Your Information</h2>
 
 @if (Model != null)
 {
-<div class="alert alert-info text-center">
-    Welcome, @Model.FirstName @Model.LastName!
-</div>
+    <div class="alert alert-info text-center">
+        Welcome, @Model.FirstName @Model.LastName!
+    </div>
 }
 
 @if (ViewBag.Error != null)
 {
-<div class="alert alert-danger text-center">
-    @ViewBag.Error
-</div>
+    <div class="alert alert-danger text-center">
+        @ViewBag.Error
+    </div>
 }
 
 <style>
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
         font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
     }
 
-    /* Container for the form, centering within the page */
     .form-container {
+        position: relative;
         background: #fff;
         width: 450px;
         padding: 1.5rem;
-        margin: 20px auto;
+        margin: 60px auto;
         border-radius: 10px;
-        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.1);
+    }
+
+    .zgłoszenie-button {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        background-color: #5f5fe8;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 120px;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .zgłoszenie-button:hover {
+        background-color: #4c4ccc;
     }
 
     .form-group {
@@ -76,41 +92,44 @@ ViewData["Title"] = "Fill Out User Info";
     }
 </style>
 
-<form asp-controller="UserInfo" asp-action="SubmitField" method="post" class="form-container">
-    <div class="form-group">
-        <label for="FirstName">First Name:</label>
-        <input asp-for="FirstName" class="form-control" id="FirstName" name="FirstName" required />
-    </div>
 
-    <div class="form-group">
-        <label for="LastName">Last Name:</label>
-        <input asp-for="LastName" class="form-control" id="LastName" name="LastName" required />
-    </div>
+<div class="form-container">
+    <form asp-controller="UserInfo" asp-action="SubmitField" method="post">
+        <div class="form-group">
+            <label for="FirstName">First Name:</label>
+            <input asp-for="FirstName" class="form-control" id="FirstName" name="FirstName" required />
+        </div>
 
-    <div class="form-group">
-        <label for="Email">Email:</label>
-        <input asp-for="Email" class="form-control" id="Email" name="Email" required />
-    </div>
+        <div class="form-group">
+            <label for="LastName">Last Name:</label>
+            <input asp-for="LastName" class="form-control" id="LastName" name="LastName" required />
+        </div>
 
-    <div class="form-group">
-        <label for="PhoneNumber">Phone Number:</label>
-        <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" name="PhoneNumber" required />
-    </div>
+        <div class="form-group">
+            <label for="Email">Email:</label>
+            <input asp-for="Email" class="form-control" id="Email" name="Email" required />
+        </div>
 
-    <div class="form-group">
-        <label for="YearOfStudy">Year of Study:</label>
-        <input asp-for="YearOfStudy" class="form-control" id="YearOfStudy" name="YearOfStudy" required />
-    </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Phone Number:</label>
+            <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" name="PhoneNumber" required />
+        </div>
 
-    <div class="form-group">
-        <label for="Faculty">Faculty:</label>
-        <input asp-for="Faculty" class="form-control" id="Faculty" name="Faculty" required />
-    </div>
+        <div class="form-group">
+            <label for="YearOfStudy">Year of Study:</label>
+            <input asp-for="YearOfStudy" class="form-control" id="YearOfStudy" name="YearOfStudy" required />
+        </div>
 
-    <div class="form-group">
-        <label for="Major">Major:</label>
-        <input asp-for="Major" class="form-control" id="Major" name="Major" required />
-    </div>
+        <div class="form-group">
+            <label for="Faculty">Faculty:</label>
+            <input asp-for="Faculty" class="form-control" id="Faculty" name="Faculty" required />
+        </div>
 
-    <button type="submit">Submit</button>
-</form>
+        <div class="form-group">
+            <label for="Major">Major:</label>
+            <input asp-for="Major" class="form-control" id="Major" name="Major" required />
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>

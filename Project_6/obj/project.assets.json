@@ -3325,24 +3325,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/mac/.nuget/packages/": {}
+    "C:\\Users\\vlady\\.nuget\\packages\\": {},
+    "D:\\Visual Studio\\Shared Components, Tools, SDKs VS\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
+      "projectUniqueName": "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj",
       "projectName": "Project_6",
-      "projectPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
-      "packagesPath": "/Users/mac/.nuget/packages/",
-      "outputPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/",
+      "projectPath": "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj",
+      "packagesPath": "C:\\Users\\vlady\\.nuget\\packages\\",
+      "outputPath": "D:\\github\\Dev_Dep_6\\Project_6\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Visual Studio\\Shared Components, Tools, SDKs VS\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/mac/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\vlady\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3409,7 +3416,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -3418,7 +3425,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Project_6 jest zależny od Microsoft.EntityFrameworkCore.Design (>= 9.0.0-preview.1), ale Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1 nie został znaleziony. Zamiast tego Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1.24081.2 został rozwiązany.",
+      "message": "Project_6 depends on Microsoft.EntityFrameworkCore.Design (>= 9.0.0-preview.1) but Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1 was not found. Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1.24081.2 was resolved instead.",
       "libraryId": "Microsoft.EntityFrameworkCore.Design",
       "targetGraphs": [
         "net9.0"
@@ -3428,7 +3435,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Project_6 jest zależny od Microsoft.EntityFrameworkCore.Relational (>= 9.0.0-preview.1), ale Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1 nie został znaleziony. Zamiast tego Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1.24081.2 został rozwiązany.",
+      "message": "Project_6 depends on Microsoft.EntityFrameworkCore.Relational (>= 9.0.0-preview.1) but Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1 was not found. Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1.24081.2 was resolved instead.",
       "libraryId": "Microsoft.EntityFrameworkCore.Relational",
       "targetGraphs": [
         "net9.0"
@@ -3438,7 +3445,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Project_6 jest zależny od Pomelo.EntityFrameworkCore.MySql (>= 9.0.0-beta.1), ale Pomelo.EntityFrameworkCore.MySql 9.0.0-beta.1 nie został znaleziony. Zamiast tego Pomelo.EntityFrameworkCore.MySql 9.0.0-preview.1 został rozwiązany.",
+      "message": "Project_6 depends on Pomelo.EntityFrameworkCore.MySql (>= 9.0.0-beta.1) but Pomelo.EntityFrameworkCore.MySql 9.0.0-beta.1 was not found. Pomelo.EntityFrameworkCore.MySql 9.0.0-preview.1 was resolved instead.",
       "libraryId": "Pomelo.EntityFrameworkCore.MySql",
       "targetGraphs": [
         "net9.0"

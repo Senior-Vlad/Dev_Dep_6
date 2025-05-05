@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_6.Models;
@@ -23,17 +22,16 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
 
             if (user == null || user.Role != "student")
-            {
                 return RedirectToAction("Login", "Auth");
-            }
 
             var userInfo = _context.UserInfos.FirstOrDefault(info => info.UserId == user.Id);
 
             if (userInfo == null)
             {
-                ViewBag.Message = "No personal inforamtion found.";
+                ViewBag.Message = "No personal information found.";
                 return View();
             }
+
             return View(userInfo);
         }
 
@@ -44,7 +42,7 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
 
             if (userInfo == null)
             {
-                ViewBag.Message = "User does not found!";
+                ViewBag.Message = "User not found!";
                 return RedirectToAction("MyInfo");
             }
 
@@ -57,13 +55,64 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
             userInfo.Major = model.Major;
             userInfo.CreationDate = DateTime.Now;
 
-            int result = _context.SaveChanges();
-            Console.WriteLine("Rows affected: " + result);
+            _context.SaveChanges();
 
-            ViewBag.Message = "Information updated successfully!";
             TempData["Message"] = "Information updated successfully!";
-
             return RedirectToAction("MyInfo");
+        }
+
+        // 👉 Показати форму
+        [HttpGet]
+        public IActionResult Zgloszenie()
+        {
+            return View();
+        }
+
+        // 👉 Обробити форму
+        [HttpPost]
+        public IActionResult Zgloszenie(Zgloszenie model)
+        {
+            Console.WriteLine("POST: Zgloszenie was triggered");
+
+            var username = HttpContext.Session.GetString("Username");
+            Console.WriteLine($"🧠 Username in session: {username}");
+
+            var user = _context.Users.FirstOrDefault(u => u.Username == username);
+            if (user == null)
+            {
+                Console.WriteLine("❌ User from session not found.");
+                return RedirectToAction("Login", "Auth");
+            }
+
+            model.StudentId = user.Id;
+            model.UserId = user.Id;
+            model.DataDodania = DateTime.Now;
+
+            var status = new ZgloszenieStatus
+            {
+                Status = "Nowe",
+                DataZmiany = DateTime.Now,
+                Zgloszenie = model
+            };
+
+            model.Statusy = new List<ZgloszenieStatus> { status };
+
+            if (ModelState.IsValid)
+            {
+                _context.Zgloszenia.Add(model);
+                //_context.ZgloszenieStatuses.Add(status);
+                _context.SaveChanges();
+                Console.WriteLine("✅ Zgloszenie saved successfully.");
+                return RedirectToAction("MyInfo");
+            }
+
+            Console.WriteLine("❌ ModelState is invalid:");
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine($" - {error.ErrorMessage}");
+            }
+
+            return View(model);
         }
     }
 }

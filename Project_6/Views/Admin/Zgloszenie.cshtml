@@ -1,0 +1,79 @@
+@using Microsoft.AspNetCore.Mvc.Rendering
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Project_6.Models.Zgloszenie
+
+@{
+    ViewData["Title"] = "Zgłoś problem";
+}
+
+<h2 class="text-center mt-4">Zgłoszenie problemu</h2>
+
+<style>
+    .form-container {
+        background: #fff;
+        width: 500px;
+        padding: 1.5rem;
+        margin: 60px auto;
+        border-radius: 10px;
+        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #5f5fe8;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #4c4ccc;
+    }
+</style>
+
+<div class="form-container">
+    <form asp-action="Zgloszenie" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="Tytul">Tytuł</label>
+            <input asp-for="Tytul" class="form-control" />
+            <span asp-validation-for="Tytul" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Tresc">Treść</label>
+            <textarea asp-for="Tresc" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Tresc" class="text-danger"></span>
+        </div>
+
+        <button type="submit">Wyślij zgłoszenie</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

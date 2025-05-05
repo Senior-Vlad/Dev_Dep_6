@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Project_6.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250504224611_AddZgloszenie")]
+    partial class AddZgloszenie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,38 +23,6 @@ namespace Project_6.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
-
-            modelBuilder.Entity("Complaint", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<bool>("IsResolved")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<DateTime>("SubmittedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Complaints");
-                });
 
             modelBuilder.Entity("Message", b =>
                 {
@@ -161,65 +132,6 @@ namespace Project_6.Migrations
                     b.ToTable("UserInfos");
                 });
 
-            modelBuilder.Entity("Project_6.Models.Zgloszenie", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DataDodania")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Tresc")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Tytul")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StudentId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Zgloszenia");
-                });
-
-            modelBuilder.Entity("Project_6.Models.ZgloszenieStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DataZmiany")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("ZgloszenieId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ZgloszenieId");
-
-                    b.ToTable("ZgloszenieStatuses");
-                });
-
             modelBuilder.Entity("User", b =>
                 {
                     b.Property<int>("Id")
@@ -249,15 +161,64 @@ namespace Project_6.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Complaint", b =>
+            modelBuilder.Entity("Zgloszenie", b =>
                 {
-                    b.HasOne("User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("User");
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DataDodania")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tresc")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Tytul")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ZgloszenieStatusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Zgloszenia");
+                });
+
+            modelBuilder.Entity("ZgloszenieStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DataZmiany")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ZgloszenieId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ZgloszenieId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ZgloszenieId1");
+
+                    b.ToTable("ZgloszenieStatuses");
                 });
 
             modelBuilder.Entity("Message", b =>
@@ -282,7 +243,7 @@ namespace Project_6.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Project_6.Models.Zgloszenie", b =>
+            modelBuilder.Entity("Zgloszenie", b =>
                 {
                     b.HasOne("User", "Student")
                         .WithMany()
@@ -290,31 +251,18 @@ namespace Project_6.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Student");
-
-                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Project_6.Models.ZgloszenieStatus", b =>
+            modelBuilder.Entity("ZgloszenieStatus", b =>
                 {
-                    b.HasOne("Project_6.Models.Zgloszenie", "Zgloszenie")
-                        .WithMany("Statusy")
-                        .HasForeignKey("ZgloszenieId")
+                    b.HasOne("Zgloszenie", "Zgloszenie")
+                        .WithMany()
+                        .HasForeignKey("ZgloszenieId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Zgloszenie");
-                });
-
-            modelBuilder.Entity("Project_6.Models.Zgloszenie", b =>
-                {
-                    b.Navigation("Statusy");
                 });
 
             modelBuilder.Entity("User", b =>

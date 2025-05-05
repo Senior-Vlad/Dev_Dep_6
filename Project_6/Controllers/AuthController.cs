@@ -1,4 +1,4 @@
-
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
 public class AuthController : Controller

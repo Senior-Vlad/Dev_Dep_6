@@ -1,0 +1,35 @@
+@model List<Project_6.Models.Zgloszenie>
+@{
+    ViewData["Title"] = "Zgłoszenia od studentów";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Treść</th>
+            <th>Użytkownik</th>
+            <th>Status</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var z in Model)
+        {
+            <tr>
+                <td>@z.Tytul</td>
+                <td>@z.Tresc</td>
+                <td>@(z.User?.Username ?? "Brak danych") <br />@(z.User?.Email ?? "-")</td>
+                <td>@(z.AktualnyStatus ?? "-")</td>
+                <td>
+                    <form asp-action="ZmienStatus" method="post">
+                        <input type="hidden" name="zgloszenieId" value="@z.Id" />
+                        <button type="submit" class="btn btn-success">Oznacz jako rozwiązane</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

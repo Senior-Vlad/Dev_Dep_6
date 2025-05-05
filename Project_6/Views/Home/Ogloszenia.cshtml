@@ -1,0 +1,151 @@
+@model dynamic
+
+@{
+    ViewData["Title"] = "Ogloszenia";
+}
+
+<link rel="stylesheet" href="~/css/chat.css" />
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .ogloszenia-container {
+        padding-top: 100px;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .conversation-list {
+        width: 25%;
+        background-color: #7d7deb;
+
+        color: white;
+        padding: 70px 10px 10px 10px;
+        overflow-y: auto;
+
+    }
+
+    .ogloszenia-area {
+        width: 75%;
+        background-color: #f4f4f8;
+
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .message-box {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .ogloszenia-message {
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: #e8e8fc;
+
+    }
+
+    .ogloszenia-message em {
+        color: #a6a6d6;
+        font-size: 0.8em;
+        margin-left: 10px;
+    }
+
+    .ogloszenia-message strong {
+        color: #5f5fe8;
+
+    }
+
+    .input-box {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #d9d9f3;
+        border-radius: 4px;
+        border: 1px solid #b0b0e0;
+    }
+
+    input[type="text"] {
+        flex-grow: 1;
+        padding: 8px;
+        border: 1px solid #a6a6d6;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-size: 14px;
+        background-color: #fdfdff;
+    }
+
+    button {
+        padding: 8px 12px;
+        border: none;
+        background-color: #5f5fe8;
+
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    button:hover {
+        background-color: #4c4ccc;
+    }
+
+    .sidebar h3,
+    .conversation-list h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+    }
+
+    .conversation-item {
+        padding: 8px;
+        margin: 5px 0;
+        background-color: #6f6fdf;
+
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .conversation-item:hover {
+        background-color: #5f5fe8;
+
+    }
+
+    .chat-container>div {
+        flex-shrink: 0;
+    }
+</style>
+
+<div class="ogloszenia-container">
+    <h1 style="text-align: center; color: #5f5fe8;">Wysłać ogloszenie globalne</h1>
+    <div class="ogloszenia-area">
+
+        <div class="message-box" id="messageBox"></div>
+
+        <div class="input-box">
+            <input type="text" id="messageInput" placeholder="Wyślij wiadomość..." aria-label="Message input">
+            <button type="button" id="sendBtn">Wyślij</button>
+        </div>
+    </div>
+</div>

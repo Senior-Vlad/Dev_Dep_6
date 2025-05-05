@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj": {}
+    "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj": {}
   },
   "projects": {
-    "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj": {
+    "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
+        "projectUniqueName": "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj",
         "projectName": "Project_6",
-        "projectPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
-        "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/",
+        "projectPath": "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj",
+        "packagesPath": "C:\\Users\\vlady\\.nuget\\packages\\",
+        "outputPath": "D:\\github\\Dev_Dep_6\\Project_6\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual Studio\\Shared Components, Tools, SDKs VS\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/mac/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vlady\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

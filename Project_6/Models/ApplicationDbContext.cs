@@ -24,4 +24,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<UserInfo> UserInfos { get; set; }
     public DbSet<RegistrationToken> RegistrationTokens { get; set; }
     public DbSet<Message> Messages { get; set; }
+    public DbSet<Zgloszenie> Zgloszenia { get; set; }
+    public DbSet<ZgloszenieStatus> ZgloszenieStatuses { get; set; }
+    public DbSet<Complaint> Complaints { get; set; }
 }

@@ -71,6 +71,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
@@ -91,4 +92,4 @@ app.MapControllerRoute(
     pattern: "signup",
     defaults: new { controller = "Auth", action = "Signup" });
 
-app.Run();
+await app.RunAsync();

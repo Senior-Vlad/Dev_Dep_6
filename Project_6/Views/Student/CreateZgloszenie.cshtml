@@ -1,0 +1,75 @@
+@model Project_6.Models.Zgloszenie
+@{
+    ViewData["Title"] = "Zgłoś problem";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .form-container {
+        width: 50%;
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 8px 8px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background: rgb(125, 125, 235);
+        color: white;
+        cursor: pointer;
+        transition: 0.9s;
+    }
+
+    button:hover {
+        color: rgb(76, 76, 185);
+    }
+</style>
+
+<body>
+    <div class="form-container">
+        <h2>Zgłoszenie</h2>
+
+        <form asp-action="Zgloszenie" method="post">
+            <div class="form-group">
+                <label asp-for="Tytul"></label>
+                <input asp-for="Tytul" class="form-control" maxlength="150" />
+                <span asp-validation-for="Tytul" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="Tresc"></label>
+                <textarea asp-for="Tresc" class="form-control" rows="5" maxlength="200"></textarea>
+                <span asp-validation-for="Tresc" class="text-danger"></span>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <button type="submit">Wyślij zgłoszenie</button>
+            </div>
+        </form>
+
+        @section Scripts {
+            @{
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            }
+        }
+    </div>
+
+</body>

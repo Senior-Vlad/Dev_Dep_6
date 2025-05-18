@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj": {}
+    "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj": {}
   },
   "projects": {
-    "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj": {
+    "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj",
+        "projectUniqueName": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
         "projectName": "Project_6",
-        "projectPath": "D:\\github\\Dev_Dep_6\\Project_6\\Project_6.csproj",
-        "packagesPath": "C:\\Users\\vlady\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\Dev_Dep_6\\Project_6\\obj\\",
+        "projectPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Visual Studio\\Shared Components, Tools, SDKs VS\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\vlady\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/user/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

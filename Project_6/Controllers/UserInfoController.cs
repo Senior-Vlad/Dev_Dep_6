@@ -28,6 +28,10 @@ namespace Project_6.Controllers
 
                 if (userId.HasValue)
                 {
+                    // if (model.Email == null) model.Email = "-";
+                    // if (model.PhoneNumber == null) model.PhoneNumber = "-";
+                    // if (model.Faculty == null) model.Faculty = "-";
+                    // if (model.Major == null) model.Major = "-";
                     var userInfo = new UserInfo
                     {
                         FirstName = model.FirstName,

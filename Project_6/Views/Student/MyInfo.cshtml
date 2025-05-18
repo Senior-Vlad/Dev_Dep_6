@@ -9,94 +9,95 @@
 }
 
 @section Scripts {
+     <partial name="_ValidationScriptsPartial" />
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const element = document.getElementById("editBtn");
-            if (element) {
-                element.addEventListener("click", enableEdit);
-            }
-
+            const editBtn = document.getElementById("editBtn");
             const cancelBtn = document.getElementById("cancelBtn");
+
+            if (editBtn) {
+                editBtn.addEventListener("click", enableEdit);
+            }
             if (cancelBtn) {
                 cancelBtn.addEventListener("click", cancelEdit);
             }
         });
 
         function enableEdit() {
-            const inputs = document.querySelectorAll('.info-form input');
-            inputs.forEach(i => i.removeAttribute('readonly'));
-
+            document.querySelectorAll('.info-form input').forEach(i => i.removeAttribute('readonly'));
             document.getElementById('editBtn').classList.add('d-none');
             document.getElementById('saveBtn').classList.remove('d-none');
             document.getElementById('cancelBtn').classList.remove('d-none');
         }
 
         function cancelEdit() {
-            const inputs = document.querySelectorAll('.info-form input');
-            inputs.forEach(i => i.setAttribute('readonly', 'true'));
-
+            document.querySelectorAll('.info-form input').forEach(i => i.setAttribute('readonly', 'true'));
             document.getElementById('editBtn').classList.remove('d-none');
             document.getElementById('saveBtn').classList.add('d-none');
             document.getElementById('cancelBtn').classList.add('d-none');
         }
     </script>
-    <!--</script>-->
 }
 
 <div class="container mt-5" style="max-width: 600px;">
-    <h2 class="text-center mb-4" style="color:rgb(125, 125, 235);">My Information</h2>
+    <h2 class="text-center mb-4" style="color:rgb(125, 125, 235);">Moje dane</h2>
 
     @if (Model != null)
     {
-        <a href="/Student/Zgloszenie" class="btn btn-sm btn-primary"
-            style="position:absolute; top:60px; right:40px; z-index:1000;">
+        @* <a href="/Student/Zgloszenie" class="btn btn-sm btn-primary"
+           style="position:absolute; top:60px; right:40px; z-index:1000;">
             Zgłosić
-        </a>
-        <form asp-action="UpdateStudentInfo" asp-controller="Student" method="post"
-            class="bg-light p-4 shadow rounded info-form">
-            <input type="hidden" name="Id" value="@Model.Id" />
+        </a> *@
+
+        @using (Html.BeginForm("UpdateStudentInfo", "Student", FormMethod.Post, new { @class = "bg-light p-4 shadow rounded info-form" }))
+        {
+            @Html.HiddenFor(m => m.Id)
+
             <div class="mb-3">
-                <label class="form-label">First Name</label>
-                <input type="text" class="form-control" name="FirstName" value="@Model.FirstName" readonly />
+                <label class="form-label">Imię</label>
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Last Name</label>
-                <input type="text" class="form-control" name="LastName" value="@Model.LastName" readonly />
+                <label class="form-label">Nazwisko</label>
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" name="Email" value="@Model.Email" readonly />
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Phone Number</label>
-                <input type="text" class="form-control" name="PhoneNumber" value="@Model.PhoneNumber" readonly />
+                <label class="form-label">Numer komórkowy</label>
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Year of Study</label>
-                <input type="text" class="form-control" name="YearOfStudy" value="@Model.YearOfStudy" readonly />
+                <label class="form-label">Rok studiów</label>
+                @Html.TextBoxFor(m => m.YearOfStudy, new { @class = "form-control", @readonly = "readonly" })
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Faculty</label>
-                <input type="text" class="form-control" name="Faculty" value="@Model.Faculty" readonly />
+                <label class="form-label">Wydział</label>
+                @Html.TextBoxFor(m => m.Faculty, new { @class = "form-control", @readonly = "readonly" })
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Major</label>
-                <input type="text" class="form-control" name="Major" value="@Model.Major" readonly />
+                <label class="form-label">Kierunek</label>
+                @Html.TextBoxFor(m => m.Major, new { @class = "form-control", @readonly = "readonly" })
             </div>
 
             <div class="text-center">
-                <button type="button" class="btn" style="background-color: rgb(125, 125, 235);" id="editBtn"
-                    onclick="enableEdit()">Edit</button>
-                <button type="submit" class="btn btn-success d-none" id="saveBtn">Save</button>
-                <button type="button" class="btn btn-secondary d-none" id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+                <button type="button" class="btn btn-primary" id="editBtn">Edytuj</button>
+                <button type="submit" class="btn btn-success d-none" id="saveBtn">Zachowaj</button>
+                <button type="button" class="btn btn-secondary d-none" id="cancelBtn">Skasuj</button>
             </div>
-        </form>
+        }
     }
     else
     {

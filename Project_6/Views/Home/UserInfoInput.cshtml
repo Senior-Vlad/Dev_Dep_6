@@ -97,12 +97,12 @@
     <form asp-controller="UserInfo" asp-action="SubmitField" method="post">
         <div class="form-group">
             <label for="FirstName">First Name:</label>
-            <input asp-for="FirstName" class="form-control" id="FirstName" name="FirstName" required />
+            <input asp-for="FirstName" class="form-control" id="FirstName" name="FirstName" maxlength="20" required />
         </div>
 
         <div class="form-group">
             <label for="LastName">Last Name:</label>
-            <input asp-for="LastName" class="form-control" id="LastName" name="LastName" required />
+            <input asp-for="LastName" class="form-control" id="LastName" name="LastName" maxlength="20" required />
         </div>
 
         <div class="form-group">
@@ -112,22 +112,23 @@
 
         <div class="form-group">
             <label for="PhoneNumber">Phone Number:</label>
-            <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" name="PhoneNumber" required />
+            <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" name="PhoneNumber" maxlength="10"
+                required />
         </div>
 
         <div class="form-group">
             <label for="YearOfStudy">Year of Study:</label>
-            <input asp-for="YearOfStudy" class="form-control" id="YearOfStudy" name="YearOfStudy" required />
+            <input asp-for="YearOfStudy" class="form-control" id="YearOfStudy" name="YearOfStudy" maxlength="2" />
         </div>
 
         <div class="form-group">
             <label for="Faculty">Faculty:</label>
-            <input asp-for="Faculty" class="form-control" id="Faculty" name="Faculty" required />
+            <input asp-for="Faculty" class="form-control" id="Faculty" name="Faculty" maxlength="20" />
         </div>
 
         <div class="form-group">
             <label for="Major">Major:</label>
-            <input asp-for="Major" class="form-control" id="Major" name="Major" required />
+            <input asp-for="Major" class="form-control" id="Major" name="Major" maxlength="20" />
         </div>
 
         <button type="submit">Submit</button>

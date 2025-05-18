@@ -194,12 +194,13 @@
     <form method="post">
         <div class="input-group">
             <i class="fas fa-user"></i>
-            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="text" name="username" id="username" placeholder="Username" minlength="3" maxlength="20"
+                required>
             <label for="username">Nazwa użytkownika</label>
         </div>
         <div class="input-group">
             <i class="fas fa-lock"></i>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="password" id="password" placeholder="Password" maxlength="20" required>
             <label for="password">Hasło</label>
         </div>
         <p class="recover">

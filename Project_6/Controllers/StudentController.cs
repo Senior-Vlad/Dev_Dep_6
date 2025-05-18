@@ -16,6 +16,21 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
             _context = context;
         }
 
+
+        public IActionResult CreateZgloszenie()
+        {
+            // var username = HttpContext.Session.GetString("Username");
+            // var user = _context.Users.FirstOrDefault(u => u.Username == username);
+
+            // if (user == null || user.Role != "student" || user.Role != "secretariate")
+            // {
+            //     return RedirectToAction("Login", "Auth");
+            // }
+
+
+            return View();
+        }
+
         public IActionResult MyInfo()
         {
             var username = HttpContext.Session.GetString("Username");
@@ -53,7 +68,7 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
             userInfo.YearOfStudy = model.YearOfStudy;
             userInfo.Faculty = model.Faculty;
             userInfo.Major = model.Major;
-            userInfo.CreationDate = DateTime.Now;
+            // userInfo.CreationDate = DateTime.Now;
 
             _context.SaveChanges();
 

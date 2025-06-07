@@ -221,13 +221,13 @@
             <label for="token">Token rejestracyjny</label>
         </div>
         <p class="recover">
-            <a href="#">Odzyskaj hasło</a>
+            <a href="@Url.Action("Recover", "Auth")">Odzyskaj hasło</a>
         </p>
         <input type="submit" class="btn" value="Zarejestruj się" name="signUp">
     </form>
 
     <div class="links">
         <p>Masz już konto?</p>
-        <a href="/#" id="signInLink">Zaloguj się</a>
+        <a href="@Url.Action("Login", "Auth")" id="signInLink">Zaloguj się</a>
     </div>
 </div>

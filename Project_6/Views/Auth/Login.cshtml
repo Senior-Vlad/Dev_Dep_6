@@ -106,6 +106,7 @@
         border-radius: 5px;
         outline: none;
         border: none;
+        text-decoration: none;
         width: 100%;
         background: rgb(125, 125, 235);
         color: white;
@@ -120,7 +121,7 @@
     }
 
     .btn:hover {
-        background: #07001f;
+        background: #7967B6FF;
     }
 
     .or {
@@ -183,6 +184,22 @@
         text-align: center;
         border-radius: 5px;
     }
+
+    .btn-link {
+        background: transparent;
+        color: rgb(125, 125, 235);
+        width: auto;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1rem;
+    }
+
+    .btn-link:hover {
+        color: rgb(92, 92, 228);
+    }
 </style>
 
 <div class="container" id="signIn">
@@ -204,11 +221,12 @@
             <label for="password">Hasło</label>
         </div>
         <p class="recover">
-            <a asp-controller="Auth" asp-action="Recover" class="btn">Odzyskaj hasło</a>
+            <button asp-controller="Auth" asp-action="Recover" class="btn">Odzyskaj hasło</button>
         </p>
         <p class="recover">
-            <input type="submit" class="btn" value="Zaloguj się" name="signIn">
+            <button type="submit" class="btn" name="signIn">Zaloguj się</button>
         </p>
+
     </form>
 
     <div class="links">

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Project_6.Models;
 
 public class AuthController : Controller
 {
@@ -19,59 +20,6 @@ public class AuthController : Controller
         var random = new Random();
         return new string(Enumerable.Repeat(chars, 12)
             .Select(s => s[random.Next(s.Length)]).ToArray());
-    }
-    // private void SendEmail(string to, string subject, string body)
-    // {
-    //     var smtpClient = new SmtpClient("smtp.gmail.com")
-    //     {
-    //         Port = 587,
-    //         Credentials = new NetworkCredential("your_email@gmail.com", "your_app_password"),
-    //         EnableSsl = true,
-    //     };
-
-    //     smtpClient.Send("your_email@gmail.com", to, subject, body);
-    // }
-
-    [HttpPost]
-    public IActionResult ResetPassword(string token, string email)
-    {
-        var user = _context.Users.FirstOrDefault(u => u.Email == email);
-        var user_token = _context.RegistrationTokens.FirstOrDefault(u => u.Token == token);
-
-        if (user == null || user_token == null)
-        {
-            ViewBag.Error = "Invalid token or email.";
-            return View("Recover");
-        }
-
-        // Генеруємо новий випадковий пароль
-        string newPassword = GenerateRandomPassword();
-        user.Password = HashPassword(newPassword); // Хешуємо новий пароль
-        _context.SaveChanges();
-
-        // Відправляємо email користувачу
-        //SendEmail(email, "Password Reset", $"Your new password is: {newPassword}");
-
-        ViewBag.Message = "New password has been sent to your email.";
-        return View("Recover");
-    }
-
-    [HttpPost]
-    public IActionResult RecoverUsername(string token, string email)
-    {
-        var user = _context.Users.FirstOrDefault(u => u.Email == email);
-        var user_token = _context.RegistrationTokens.FirstOrDefault(u => u.Token == token);
-        if (user == null || user_token == null)
-        {
-            ViewBag.Error = "Invalid token or email.";
-            return View("Recover");
-        }
-
-        // Відправляємо email користувачу з username
-        //SendEmail(email, "Username Recovery", $"Your username is: {user.Username}");
-
-        ViewBag.Message = "Your username has been sent to your email.";
-        return View("Recover");
     }
 
     private readonly ApplicationDbContext _context;
@@ -133,8 +81,6 @@ public class AuthController : Controller
         return View();
     }
 
-
-
     public IActionResult Logout()
     {
         // clear session
@@ -182,6 +128,132 @@ public class AuthController : Controller
 
         return RedirectToAction("Login", "Auth");
     }
+
+    // Recover username
+    [HttpPost]
+    public IActionResult RecoverUsername(RecoverViewModel model)
+    {
+        var token = _context.RegistrationTokens
+            .FirstOrDefault(t => t.Token == model.Token && !t.IsUsed);
+
+        if (token == null)
+        {
+            ModelState.AddModelError("", "Nieprawidłowy lub wykorzystany token.");
+            return View("Recover", model);
+        }
+
+        var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
+        if (user != null)
+        {
+            // Optionally mark token as used
+            token.IsUsed = true;
+            _context.SaveChanges();
+            Console.WriteLine("Username: " + user.Username);
+
+            ViewBag.Username = user.Username;
+            return View("ShowUsername");
+        }
+
+        ModelState.AddModelError("", "Nie znaleziono użytkownika.");
+        return View("Recover", model);
+    }
+
+    // Begin password reset
+    [HttpPost]
+    public IActionResult ResetPassword(RecoverViewModel model)
+    {
+        var token = _context.RegistrationTokens
+            .FirstOrDefault(t => t.Token == model.Token && !t.IsUsed);
+
+        if (token == null)
+        {
+            ModelState.AddModelError("", "Nieprawidłowy lub wykorzystany token.");
+            return View("Recover", model);
+        }
+
+        var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
+        if (user != null)
+        {
+            Console.WriteLine("I am here: " + user.Username);
+            Console.WriteLine("I am token: " + model.Token);
+            Console.WriteLine("I am email: " + model.Email);
+
+            return RedirectToAction("SetNewPassword", model);
+        }
+
+        ModelState.AddModelError("", "Nie znaleziono użytkownika.");
+        return View("Recover");
+    }
+
+    // Set new password form
+    public IActionResult SetNewPassword(string email, string token)
+    {
+        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(token))
+        {
+            return RedirectToAction("Recover");
+        }
+
+        var model = new RecoverViewModel
+        {
+            Email = email,
+            Token = token
+        };
+
+        return View(model);
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> SetNewPassword(string email, string token, string newPassword)
+    {
+
+        var registrationToken = await _context.RegistrationTokens
+            .FirstOrDefaultAsync(t => t.Token == token && !t.IsUsed);
+
+        if (registrationToken == null)
+        {
+            ModelState.AddModelError("", "Token jest nieprawidłowy lub został już użyty.");
+            return View();
+        }
+
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        if (user == null)
+        {
+            ModelState.AddModelError("", "Nie znaleziono użytkownika z podanym adresem email.");
+            return View();
+        }
+
+        user.Password = HashPassword(newPassword);
+
+        _context.Entry(user).Property(u => u.Password).IsModified = true;
+
+        registrationToken.IsUsed = true;
+
+        _context.Update(registrationToken);
+        _context.Update(user);
+
+
+        await _context.SaveChangesAsync();
+
+        TempData["Message"] = "Hasło zostało zaktualizowane.";
+        return RedirectToAction("Login", "Auth");
+    }
+
+
+    [HttpGet]
+    public IActionResult ShowUsername()
+    {
+        var username = TempData["RecoveredUsername"] as string;
+        if (username == null)
+        {
+            return RedirectToAction("Recover");
+        }
+
+        ViewBag.Username = username;
+        return View();
+    }
+
+
 
 }
 

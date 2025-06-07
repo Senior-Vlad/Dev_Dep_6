@@ -52,6 +52,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWNvdmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Auth/SetNewPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9TZXROZXdQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Auth/ShowUsername.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9TaG93VXNlcm5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/user/Downloads/Dev_Dep_6/Project_6/Views/Auth/Signup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9TaWdudXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

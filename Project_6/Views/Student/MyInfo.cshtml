@@ -1,6 +1,6 @@
 @model Project_6.Models.UserInfo
 @{
-    ViewData["Title"] = "My Information";
+    ViewData["Title"] = "Moje dane";
 }
 
 @if (TempData["Message"] != null)
@@ -40,7 +40,7 @@
 }
 
 <div class="container mt-5" style="max-width: 600px;">
-    <h2 class="text-center mb-4" style="color:rgb(125, 125, 235);">Moje dane</h2>
+    <h2 class="text-center mb-4" style="color:rgb(125, 125, 235); margin-top: 80px;">Moje dane</h2>
 
     @if (Model != null)
     {

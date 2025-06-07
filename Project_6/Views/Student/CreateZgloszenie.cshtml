@@ -5,7 +5,7 @@
 
 <style>
     body {
-        font-family: Arial, sans-serif;
+        
         background-color: #f4f4f9;
         margin: 0;
         padding: 0;
@@ -29,7 +29,7 @@
 
     button {
         font-size: 1.1rem;
-        font-weight: 600;
+        font-weight: 400;
         padding: 8px 8px;
         border-radius: 5px;
         outline: none;
@@ -47,32 +47,32 @@
 
 <body>
     <div class="form-container">
-        <h2>Zgłoszenie</h2>
+        <h2>Wyślij zgłoszenie</h2>
 
         <form asp-action="Zgloszenie" method="post">
 
             <div class="form-group">
-                <label asp-for="Category">Kategoria</label>
+                <label asp-for="Category">Kategoria:</label>
                 <select asp-for="Category" class="form-control">
                     <option value="">-- Wybierz kategorię --</option>
                     <option value="Problem techniczny">Problem techniczny</option>
-                    <option value="Dziekanat">Dziekanat</option>
+                    <option value="Dziekanat">Zapytanie do dziekanatu</option>
                 </select>
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Tytul"></label>
+            <div class="form-group mt-3">
+                <label asp-for="Tytul">Tytuł zgłoszenia:</label>
                 <input asp-for="Tytul" class="form-control" maxlength="150" />
                 <span asp-validation-for="Tytul" class="text-danger"></span>
             </div>
             <div class="form-group mt-3">
-                <label asp-for="Tresc"></label>
+                <label asp-for="Tresc">Treść zgłoszenia:</label>
                 <textarea asp-for="Tresc" class="form-control" rows="5" maxlength="200"></textarea>
                 <span asp-validation-for="Tresc" class="text-danger"></span>
             </div>
             <div style="display: flex; justify-content: center; margin-top: 20px;">
-                <button type="submit">Wyślij zgłoszenie</button>
+                <button type="submit">Wyślij</button>
             </div>
         </form>
 

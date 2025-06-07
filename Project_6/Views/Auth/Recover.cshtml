@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Recover";
+    ViewData["Title"] = "Odzyskaj konto";
 }
 @if (TempData["Message"] != null)
 {
@@ -47,7 +47,9 @@
                 <button type="submit">Wyślij</button>
             </form>
         </div>
-        <a href="@Url.Action("Login", "Auth")">Powrót</a>
+        <button id="backBtn" class="btn btn-secondary" style="font-size: 0.9rem;" onclick="window.location.href='@Url.Action("Login", "Auth")'">Powrót</button>
+
+
     </div>
 </div>
 

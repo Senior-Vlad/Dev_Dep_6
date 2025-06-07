@@ -57,7 +57,7 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
 
             if (userInfo == null)
             {
-                ViewBag.Message = "User not found!";
+                ViewBag.Message = "Uzytkownik nieznaleziony!";
                 return RedirectToAction("MyInfo");
             }
 

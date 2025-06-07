@@ -77,7 +77,7 @@ public class AuthController : Controller
 
 
         }
-        ViewBag.Error = "Invalid username or password";
+        ViewBag.Error = "Niepoprawna nazwa użytkownika lub hasło";
         return View();
     }
 
@@ -102,13 +102,13 @@ public class AuthController : Controller
 
         if (regToken == null)
         {
-            ViewBag.Error = "Invalid or already used registration token.";
+            ViewBag.Error = "Niepoprawny lub wykorzystany token.";
             return View();
         }
 
         if (_context.Users.Any(u => u.Email == email))
         {
-            ViewBag.Error = "Email is already registerd.";
+            ViewBag.Error = "Użytkownik z tym adresem email już istnieje.";
             return View();
         }
 
@@ -124,7 +124,7 @@ public class AuthController : Controller
         regToken.IsUsed = true;
         _context.SaveChanges();
 
-        ViewBag.Message = $"User {username} has been successfully registered!";
+        ViewBag.Message = $"Uzytkownik {username} został zarejestrowany!";
 
         return RedirectToAction("Login", "Auth");
     }

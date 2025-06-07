@@ -3325,19 +3325,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "/Users/mac/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
+      "projectUniqueName": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
       "projectName": "Project_6",
-      "projectPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/Project_6.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Downloads/Dev_Dep_6/Project_6/obj/",
+      "projectPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/Project_6.csproj",
+      "packagesPath": "/Users/mac/.nuget/packages/",
+      "outputPath": "/Users/mac/Documents/GitHub/Dev_Dep_6/Project_6/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/user/.nuget/NuGet/NuGet.Config"
+        "/Users/mac/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -3409,7 +3409,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -3418,7 +3418,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Project_6 depends on Microsoft.EntityFrameworkCore.Design (>= 9.0.0-preview.1) but Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1 was not found. Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1.24081.2 was resolved instead.",
+      "message": "Project_6 jest zależny od Microsoft.EntityFrameworkCore.Design (>= 9.0.0-preview.1), ale Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1 nie został znaleziony. Zamiast tego Microsoft.EntityFrameworkCore.Design 9.0.0-preview.1.24081.2 został rozwiązany.",
       "libraryId": "Microsoft.EntityFrameworkCore.Design",
       "targetGraphs": [
         "net9.0"
@@ -3428,7 +3428,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Project_6 depends on Microsoft.EntityFrameworkCore.Relational (>= 9.0.0-preview.1) but Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1 was not found. Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1.24081.2 was resolved instead.",
+      "message": "Project_6 jest zależny od Microsoft.EntityFrameworkCore.Relational (>= 9.0.0-preview.1), ale Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1 nie został znaleziony. Zamiast tego Microsoft.EntityFrameworkCore.Relational 9.0.0-preview.1.24081.2 został rozwiązany.",
       "libraryId": "Microsoft.EntityFrameworkCore.Relational",
       "targetGraphs": [
         "net9.0"
@@ -3438,7 +3438,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Project_6 depends on Pomelo.EntityFrameworkCore.MySql (>= 9.0.0-beta.1) but Pomelo.EntityFrameworkCore.MySql 9.0.0-beta.1 was not found. Pomelo.EntityFrameworkCore.MySql 9.0.0-preview.1 was resolved instead.",
+      "message": "Project_6 jest zależny od Pomelo.EntityFrameworkCore.MySql (>= 9.0.0-beta.1), ale Pomelo.EntityFrameworkCore.MySql 9.0.0-beta.1 nie został znaleziony. Zamiast tego Pomelo.EntityFrameworkCore.MySql 9.0.0-preview.1 został rozwiązany.",
       "libraryId": "Pomelo.EntityFrameworkCore.MySql",
       "targetGraphs": [
         "net9.0"

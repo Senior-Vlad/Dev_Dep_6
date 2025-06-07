@@ -220,17 +220,20 @@
             <input type="password" name="password" id="password" placeholder="Password" maxlength="20" required>
             <label for="password">Hasło</label>
         </div>
-        <p class="recover">
-            <button asp-controller="Auth" asp-action="Recover" class="btn">Odzyskaj hasło</button>
-        </p>
+        
+
         <p class="recover">
             <button type="submit" class="btn" name="signIn">Zaloguj się</button>
+        </p>
+
+         <p class="recover">
+            <a href="@Url.Action("Recover", "Auth")">Odzyskaj konto</a>
         </p>
 
     </form>
 
     <div class="links">
-        <p>Nie masz jeszcze konta?</p>
-        <a href="@Url.Action("Signup", "Auth")" id="signUpLink">Zarejestruj się</a>
+        <p>Nie masz jeszcze konta?
+        <a href="@Url.Action("Signup", "Auth")" id="signUpLink">Zarejestruj się</a></p>
     </div>
 </div>

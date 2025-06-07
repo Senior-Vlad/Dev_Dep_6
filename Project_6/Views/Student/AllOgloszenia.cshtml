@@ -1,12 +1,12 @@
 @model List<Project_6.Models.OgloszenieViewModel>
 
 @{
-    ViewData["Title"] = "Wszystkie Ogłoszenia";
+    ViewData["Title"] = "Historia powiadomień";
 }
 
 <style>
     body {
-        font-family: Arial, sans-serif;
+       
         background-color: #f4f4f9;
         margin: 0;
         padding: 0;
@@ -15,7 +15,8 @@
     h2 {
         text-align: center;
         color: #333;
-        margin-top: 20px;
+        margin-top: 60px;
+        padding: 30px;
     }
 
     .ogloszenia-container {
@@ -60,11 +61,11 @@
 </style>
 
 <div class="ogloszenia-container">
-    <h2>Wszystkie Ogłoszenia</h2>
+    <h2>Historia powiadomień</h2>
 
     @if (!Model.Any())
     {
-        <div class="alert-info">Brak dostępnych ogłoszeń.</div>
+        <div class="alert-info">Brak dostępnych powiadomień globalnych.</div>
     }
     else
     {

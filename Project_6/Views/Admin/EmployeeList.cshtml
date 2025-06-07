@@ -1,6 +1,6 @@
 @model List<Project_6.ViewModels.StudentViewModel>
 @{
-    ViewData["Title"] = "Student Table";
+    ViewData["Title"] = "Lista pracowników dziekanatu";
 }
 
 <style>
@@ -172,7 +172,7 @@
                             <td>
                                 <form asp-action="DeleteStudent" asp-route-id="@emplyee.Id" method="post"
                                     style="display:inline;"
-                                    onsubmit="return confirm('Czy na pewno chcesz usunąć studenta?');">
+                                    onsubmit="return confirm('Czy na pewno chcesz usunąć pracownika?');">
                                     <button type="submit" class="btn btn-sm btn-icon-delete" title="Usuń">
                                         <i class="fas fa-trash"></i>
                                     </button>

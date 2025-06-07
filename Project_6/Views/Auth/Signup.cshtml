@@ -196,7 +196,7 @@
 </style>
 
 <div class="container" id="signUp">
-    <h1 class="form-title">Sign Up</h1>
+    <h1 class="form-title">Zarejestruj się</h1>
     <form method="post">
         <div class="input-group">
             <i class="fas fa-envelope"></i>
@@ -220,14 +220,12 @@
             <input type="text" name="token" id="token" placeholder="Registration Token" maxlength="20" required />
             <label for="token">Token rejestracyjny</label>
         </div>
-        <p class="recover">
-            <a href="@Url.Action("Recover", "Auth")">Odzyskaj hasło</a>
-        </p>
+       
         <input type="submit" class="btn" value="Zarejestruj się" name="signUp">
     </form>
 
     <div class="links">
-        <p>Masz już konto?</p>
-        <a href="@Url.Action("Login", "Auth")" id="signInLink">Zaloguj się</a>
+        <p>Masz już konto?
+        <a href="@Url.Action("Login", "Auth")" id="signInLink">Zaloguj się</a></p>
     </div>
 </div>

@@ -1,0 +1,115 @@
+@model Project_6.Models.OgloszenieViewModel
+
+@{
+    ViewData["Title"] = "Nowe ogłoszenie";
+}
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f8;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        padding-top: 80px;
+    }
+
+    .form-box {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px;
+        width: 100%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        color: #5f5fe8;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .text-danger {
+        color: red;
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        border: none;
+        background-color: #5f5fe8;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn:hover {
+        background-color: #4c4ccc;
+    }
+</style>
+
+<div class="form-container">
+    <div class="form-box">
+        <h2>@ViewData["Title"]</h2>
+
+        <form asp-action="CreateOgloszenia" method="post">
+            <div class="form-group">
+                <label asp-for="Title">Tytuł</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Message">Wiadomość</label>
+                <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn">Utwórz ogłoszenie</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

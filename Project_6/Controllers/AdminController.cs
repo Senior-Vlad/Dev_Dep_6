@@ -66,6 +66,7 @@ public class AdminController : Controller
         var zgloszenia = _context.Zgloszenia
             .Include(z => z.User)
             .Include(z => z.Statusy)
+            .Where(z => z.Category == "Problem techniczny")
             .ToList();
 
         return View(zgloszenia);
@@ -187,6 +188,31 @@ public class AdminController : Controller
             .ToList();
 
         return View(students);
+    }
+
+    public IActionResult EmployeeList()
+    {
+        var username = HttpContext.Session.GetString("Username");
+        var user = _context.Users.FirstOrDefault(u => u.Username == username);
+
+        var checkResult = RoleCheck(username);
+        if (checkResult != null)
+            return checkResult;
+
+        var emplyee = _context.UserInfos
+            .Where(info => info.User.Role == "secretariate")
+            .Select(info => new StudentViewModel
+            {
+                Id = info.Id,
+                FirstName = info.FirstName,
+                LastName = info.LastName,
+                Username = info.User.Username,
+                Email = info.Email,
+                Role = info.User.Role
+            })
+            .ToList();
+
+        return View(emplyee);
     }
 
     private IActionResult RoleCheck(string username)

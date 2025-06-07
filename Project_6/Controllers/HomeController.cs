@@ -6,11 +6,15 @@ namespace Project_6.Controllers;
 
 public class HomeController : Controller
 {
+
+    private readonly ApplicationDbContext _context;
+
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
@@ -63,4 +67,26 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    [HttpGet]
+    public JsonResult GetLatestOgloszenie()
+    {
+        var latest = _context.Ogloszenia
+            .OrderByDescending(o => o.CreatedAt)
+            .FirstOrDefault();
+
+        if (latest != null)
+        {
+            return Json(new
+            {
+                title = latest.Title,
+                message = latest.Message,
+                createdAt = latest.CreatedAt.ToString("dd.MM.yyyy HH:mm"),
+                createdBy = latest.CreateByRole
+            });
+        }
+
+        return Json(null);
+    }
+
 }

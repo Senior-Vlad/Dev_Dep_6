@@ -114,9 +114,13 @@ public class AuthController : Controller
             {
                 return RedirectToAction("Home", "Admin");
             }
-            if (userIdExist == null && user.Role == "Student" || user.Role == "Secretariate")
+            if (userIdExist == null && user.Role == "student")
             {
                 return RedirectToAction("UserInfoInput", "Home");
+            }
+            if (userIdExist == null && user.Role == "secretariate")
+            {
+                return RedirectToAction("Home", "Secretariate");
             }
             else
             {

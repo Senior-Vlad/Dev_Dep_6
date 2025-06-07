@@ -57,6 +57,16 @@
     <form asp-action="Zgloszenie" method="post">
         @Html.AntiForgeryToken()
         <div class="form-group">
+            <label asp-for="Category">Kategoria</label>
+            <select asp-for="Category" class="form-control">
+                <option value="">-- Wybierz kategorię --</option>
+                <option value="Problem techniczny">Problem techniczny</option>
+                @* <option value="Dziekanat">Dziekanat</option> *@
+            </select>
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
             <label asp-for="Tytul">Tytuł</label>
             <input asp-for="Tytul" class="form-control" />
             <span asp-validation-for="Tytul" class="text-danger"></span>

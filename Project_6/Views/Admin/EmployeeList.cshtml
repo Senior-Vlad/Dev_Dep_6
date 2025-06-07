@@ -1,7 +1,8 @@
-@model List<Project_6.Models.Zgloszenie>
+@model List<Project_6.ViewModels.StudentViewModel>
 @{
-    ViewData["Title"] = "Zgłoszenia od studentów";
+    ViewData["Title"] = "Student Table";
 }
+
 <style>
     html,
     body {
@@ -10,7 +11,6 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        font-family: Arial, sans-serif;
     }
 
     * {
@@ -25,6 +25,7 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f8;
+        /* szarość tła */
     }
 
     .table-area {
@@ -37,12 +38,11 @@
         overflow-y: auto;
     }
 
-    h2 {
+    h1 {
         color: #5f5fe8;
         margin: 0 0 20px 0;
         text-align: center;
         font-size: 24px;
-        font-weight: 700;
     }
 
     .table-box {
@@ -61,8 +61,6 @@
         border-collapse: separate;
         border-spacing: 0;
         font-size: 14px;
-        font-weight: 500;
-        /* Makes table text thicker */
     }
 
     .table th,
@@ -91,7 +89,7 @@
     .table th {
         background-color: #7d7deb;
         color: white;
-        font-weight: 700;
+        font-weight: bold;
     }
 
     .table tbody tr {
@@ -120,49 +118,70 @@
         background-color: #4c4ccc;
     }
 
-    .scrollable-table {
-        max-height: 700px;
-        overflow-y: auto;
-        overflow-x: auto;
+    .btn-icon-delete {
+        background-color: transparent;
+        border: 1px solid #a6a6d6;
+        color: #5f5fe8;
+        padding: 6px;
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+    }
+
+    .btn-icon-delete:hover {
+        background-color: #e8e8fc;
+        color: #4c4ccc;
+    }
+
+    .fas {
+        font-size: 14px;
     }
 </style>
 
-<h2>@ViewData["Title"]</h2>
 <div class="table-container">
     <div class="table-area">
         <div class="table-box">
-            <div class="scrollable-table">
-                <table class="table">
-                    <thead>
+            <h1>Lista pracowników dziekanatu</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID pracownika</th>
+                        <th>Imię i nazwisko</th>
+                        <th>Nazwa użytkownika</th>
+                        <th>Email</th>
+                        <th>Rola</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var i = 0;
+                    }
+                    @foreach (var emplyee in Model)
+                    {
+                        i++;
                         <tr>
-                            <th>ID</th>
-                            <th>Tytuł</th>
-                            <th>Treść</th>
-                            <th>Użytkownik</th>
-                            <th>Status</th>
-                            <th>Akcje</th>
+                            <td>@i</td>
+                            <td>@emplyee.FirstName @emplyee.LastName</td>
+                            <td>@emplyee.Username</td>
+                            <td>@emplyee.Email</td>
+                            <td>@emplyee.Role</td>
+                            <td>
+                                <form asp-action="DeleteStudent" asp-route-id="@emplyee.Id" method="post"
+                                    style="display:inline;"
+                                    onsubmit="return confirm('Czy na pewno chcesz usunąć studenta?');">
+                                    <button type="submit" class="btn btn-sm btn-icon-delete" title="Usuń">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var z in Model)
-                        {
-                            <tr>
-                                <td>@z.Id</td>
-                                <td>@z.Tytul</td>
-                                <td>@z.Tresc</td>
-                                <td>@(z.User?.Username ?? "Brak danych") <br />@(z.User?.Email ?? "-")</td>
-                                <td>@(z.AktualnyStatus ?? "-")</td>
-                                <td>
-                                    <form asp-action="ZmienStatus" method="post">
-                                        <input type="hidden" name="zgloszenieId" value="@z.Id" />
-                                        <button class="btn" type="submit">Oznacz jako rozwiązane</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

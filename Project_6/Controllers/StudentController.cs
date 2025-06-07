@@ -129,5 +129,19 @@ namespace Users.user.Downloads.Dev_Dep_6.Project_6.bin
 
             return View(model);
         }
+
+        public IActionResult AllOgloszenia()
+        {
+            var ogloszenia = _context.Ogloszenia
+                .Select(o => new OgloszenieViewModel
+                {
+                    Title = o.Title,
+                    Message = o.Message,
+                    CreatedAt = o.CreatedAt
+                }).ToList();
+
+            return View(ogloszenia);
+        }
+
     }
 }

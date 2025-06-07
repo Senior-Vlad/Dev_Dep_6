@@ -20,88 +20,81 @@
     @if (Context.Session.GetString("Username") == null)
     {
 
-    <div style="text-align:center">
-    <img src="~/img/unicom_logo_big.png" alt="UniCom Logo" style="width:300px; margin-top: 40px;" />
-    </div>
+        <div style="text-align:center">
+            <img src="~/img/unicom_logo_big.png" alt="UniCom Logo" style="width:300px; margin-top: 40px;" />
+        </div>
 
     }
 
     @if (Context.Session.GetString("Username") != null)
     {
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="navbar">
+        <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #fff; border-bottom: 1px solid #ddd;">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-    <img src="~/img/unicom_logo_big.png" alt="UniCom Logo" style="height: 40px;">
-    </a>
+                    <img src="~/img/unicom_logo_big.png" alt="UniCom Logo" style="height: 40px;">
+                </a>
 
-                <ul class="navbar-menu" id="navbarContent">
+                <ul class="navbar-nav d-flex flex-row align-items-center ms-auto" id="navbarContent">
                     @{
                         var role = Context.Session.GetString("Role");
                     }
 
                     @if (role == "admin" || role == "superadmin")
                     {
-                        @* <li class="nav-item">
-                            <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a>
-                        </li> *@
-
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" asp-controller="Admin" asp-action="Home">Strona główna</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
                         </li>
                     }
 
                     @if (role == "student")
                     {
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" asp-controller="Home" asp-action="Index">Strona główna</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" asp-controller="Student" asp-action="MyInfo">Mój profil</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" asp-controller="Student" asp-action="CreateZgloszenie">Zgłosić</a>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-controller="Student" asp-action="CreateZgloszenie">Zgłosić</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-controller="Student" asp-action="AllOgloszenia">Ogłoszenia</a>
+                        </li>
+                        <li class="nav-item me-3">
                             <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
                         </li>
-
-                         <li class="nav-item" style="margin-left: 40px;"><span class="notification-icon">
-                <img src="~/img/notification-bell.png" style="width: 25px; height: 25px;" alt="Notification Bell"/>
-                <div class="notification-tooltip" id="notificationTooltip">
-                    <p>Szanowni Użytkownicy,<br><br>
-
-Dnia 20.04.2025 w godzinach 00:00-3:00 zostanie przeprowadzona przerwa techniczna systemu UniCom. System w tym czasie będzie niedostępny.
-<br><br>
-<p><em>Dodano przez: Administrator <br>@DateTime.Now</em></p>
-                    <button onclick="markAsRead()">Przeczytane</button>
-                </div>
-            </span>
-</li>
+                        <li class="nav-item notification-icon me-3">
+                            <img src="~/img/notification-bell.png" style="width: 25px; height: 25px;" alt="Notification Bell" />
+                            <div class="notification-tooltip" id="notificationTooltip">
+                                <p id="notificationMessage">Brak nowych ogłoszeń.</p>
+                                <p id="notificationMeta"></p>
+                                <button class="btn" onclick="markAsRead()">Przeczytane</button>
+                            </div>
+                        </li>
                     }
 
                     @if (role == "secretariate")
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Strona główna</a>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-controller="Secretariate" asp-action="Home">Strona główna</a>
                         </li>
-                        <li class="nav-link">
-                            <a class="nav-link" asp-controller="Home" asp-action="Ogloszenia">Ogłoszenia</a>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-controller="Secretariate" asp-action="CreateOgloszenia">Ogłoszenia</a>
                         </li>
-                        <li class="nav-item" >
-                           <a class="nav-link" asp-controller="Student" asp-action="CreateZgloszenie">Zgłosić</a>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-controller="Secretariate" asp-action="CreateZgloszenie">Zgłosić</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
                         </li>
                     }
-
-
                 </ul>
             </div>
         </nav>
+
     }
 
     <div style="width: 100vw;">
@@ -111,21 +104,40 @@ Dnia 20.04.2025 w godzinach 00:00-3:00 zostanie przeprowadzona przerwa techniczn
     </div>
 
 
-        <script>
-        document.querySelector(".notification-icon").addEventListener("click", function (e) {
-            e.preventDefault();
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const icon = document.querySelector(".notification-icon");
             const tooltip = document.getElementById("notificationTooltip");
-            const iconRect = this.getBoundingClientRect();
-            tooltip.style.top = `${iconRect.bottom + window.scrollY + 32}px`;
-            tooltip.style.left = `${iconRect.left + window.scrollX - 180 }px`;
-            tooltip.style.display = tooltip.style.display === "block" ? "none" : "block";
+
+            if (icon) {
+                icon.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    // Toggle display
+                    tooltip.style.display = tooltip.style.display === "block" ? "none" : "block";
+
+                    if (tooltip.style.display === "block") {
+                        fetch("/Home/GetLatestOgloszenie")
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data) {
+                                    document.getElementById("notificationMessage").innerHTML = `<strong>${data.title}</strong><br>${data.message}`;
+                                    document.getElementById("notificationMeta").innerHTML = `<em>Dodano przez: ${data.createdBy}<br>${data.createdAt}</em>`;
+                                } else {
+                                    document.getElementById("notificationMessage").innerText = "Brak nowych ogłoszeń.";
+                                    document.getElementById("notificationMeta").innerText = "";
+                                }
+                            });
+                    }
+                });
+            }
         });
 
         function markAsRead() {
-            const tooltip = document.getElementById("notificationTooltip");
-            tooltip.style.display = "none";
+            document.getElementById("notificationTooltip").style.display = "none";
         }
     </script>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -136,55 +148,49 @@ Dnia 20.04.2025 w godzinach 00:00-3:00 zostanie przeprowadzona przerwa techniczn
 
 </html>
 <style>
-/*dla testowego tooltipa(do zmiany)*/
-.notification-icon {
+    .notification-icon {
         cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 20px;
         display: inline-block;
-
+        margin-left: 20px;
     }
-
-    .notification-icon img {
-        margin-top:3px;
-        transition: opacity 0.2s;
-    }
-
-    .notification-icon:hover img {
-        opacity: 0.7;
-    }
-
 
     .notification-tooltip {
         display: none;
-        position: fixed;
+        position: absolute;
+        right: 0;
+        top: 40px;
         background-color: #fdfdff;
         border: 1px solid #a6a6d6;
         border-radius: 4px;
         padding: 10px;
-        width: 200px;
+        width: 250px;
         color: #5f5fe8;
         font-size: 13px;
-        z-index: 1001;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1050;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .notification-tooltip p {
-        margin: 0 0 8px 0;
+    .navbar-nav .nav-link {
+        color: rgb(41, 3, 78);
+        font-weight: 500;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .notification-tooltip button {
-        padding: 6px 10px;
-        background-color: #5f5fe8;
+    .navbar-nav .nav-link:hover {
+        color: #6060ABFF;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        font-weight: 300;
+        padding: 8px 8px;
+        border-radius: 5px;
+        outline: none;
         border: none;
+        background: rgb(125, 125, 235);
         color: white;
-        border-radius: 4px;
         cursor: pointer;
-        font-size: 12px;
-    }
-
-    .notification-tooltip button:hover {
-        background-color: #4c4ccc;
+        transition: 0.9s;
     }
 </style>

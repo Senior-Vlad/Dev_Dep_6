@@ -17,6 +17,8 @@ public class ComplaintController : Controller
     public IActionResult Submit(string title, string content)
     {
         var username = HttpContext.Session.GetString("Username");
+        var role = HttpContext.Session.GetString("Role");
+
         var user = _context.Users.FirstOrDefault(u => u.Username == username);
 
         if (user == null) return RedirectToAction("Login", "Auth");
@@ -31,7 +33,15 @@ public class ComplaintController : Controller
         _context.Complaints.Add(complaint);
         _context.SaveChanges();
 
-        return RedirectToAction("MyInfo", "Student");
+        if (role == "student")
+        {
+            return RedirectToAction("MyInfo", "Student");
+        }
+        if (role == "secretariate")
+        {
+            return RedirectToAction("Home", "Secretariate");
+        }
+        return null;
     }
 
     [HttpGet]

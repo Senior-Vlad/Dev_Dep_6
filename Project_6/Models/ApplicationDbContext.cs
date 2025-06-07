@@ -15,6 +15,7 @@
 // }
 using Microsoft.EntityFrameworkCore;
 using Project_6.Models;
+using Users.user.Downloads.Dev_Dep_6.Project_6.Models;
 
 public class ApplicationDbContext : DbContext
 {
@@ -27,4 +28,5 @@ public class ApplicationDbContext : DbContext
     public DbSet<Zgloszenie> Zgloszenia { get; set; }
     public DbSet<ZgloszenieStatus> ZgloszenieStatuses { get; set; }
     public DbSet<Complaint> Complaints { get; set; }
+    public DbSet<Ogloszenie> Ogloszenia { get; set; }
 }

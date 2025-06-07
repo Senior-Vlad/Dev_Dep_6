@@ -1,7 +1,8 @@
-@model List<Project_6.Models.Zgloszenie>
+@model List<Project_6.ViewModels.StudentViewModel>
 @{
-    ViewData["Title"] = "Zgłoszenia od studentów";
+    ViewData["Title"] = "Student Table";
 }
+
 <style>
     html,
     body {
@@ -10,7 +11,6 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        font-family: Arial, sans-serif;
     }
 
     * {
@@ -25,6 +25,7 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f8;
+        /* szarość tła */
     }
 
     .table-area {
@@ -37,32 +38,34 @@
         overflow-y: auto;
     }
 
-    h2 {
+    h1 {
         color: #5f5fe8;
+        /* ciemniejsza lawenda */
         margin: 0 0 20px 0;
         text-align: center;
         font-size: 24px;
-        font-weight: 700;
     }
 
     .table-box {
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 8px;
+        /* zwiększone zaokrąglenie dla lepszego efektu */
         padding: 20px;
         width: 100%;
         max-width: 1200px;
         margin-bottom: 20px;
         overflow: hidden;
+        /* zapewnia, że zawartość nie wychodzi poza zaokrąglone rogi */
     }
 
     .table {
         width: 100%;
         border-collapse: separate;
+        /* zmieniono na separate, aby zaokrąglenie działało */
         border-spacing: 0;
+        /* usuwa odstępy między komórkami */
         font-size: 14px;
-        font-weight: 500;
-        /* Makes table text thicker */
     }
 
     .table th,
@@ -70,8 +73,10 @@
         padding: 10px;
         text-align: left;
         border: 1px solid #a6a6d6;
+        /* jasna lawenda dla ramek */
     }
 
+    /* Zaokrąglenie rogów dla pierwszej i ostatniej komórki w nagłówku i wierszach */
     .table th:first-child {
         border-top-left-radius: 8px;
     }
@@ -90,22 +95,26 @@
 
     .table th {
         background-color: #7d7deb;
+        /* jasna lawenda */
         color: white;
-        font-weight: 700;
+        font-weight: bold;
     }
 
     .table tbody tr {
         background-color: #fdfdff;
+        /* jasne tło wierszy */
     }
 
     .table tbody tr:hover {
         background-color: #e8e8fc;
+        /* jasna lawenda przy najechaniu */
     }
 
     .btn {
         padding: 8px 12px;
         border: none;
         background-color: #5f5fe8;
+        /* ciemna lawenda */
         color: white;
         border-radius: 4px;
         cursor: pointer;
@@ -118,51 +127,67 @@
 
     .btn:hover {
         background-color: #4c4ccc;
+        /* ciemniejszy odcień przy najechaniu */
     }
 
-    .scrollable-table {
-        max-height: 700px;
-        overflow-y: auto;
-        overflow-x: auto;
+    .btn-icon-delete {
+        background-color: transparent;
+        border: 1px solid #a6a6d6;
+        /* jasna lawenda dla obramowania */
+        color: #5f5fe8;
+        /* ciemna lawenda dla ikony */
+        padding: 6px;
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+    }
+
+    .btn-icon-delete:hover {
+        background-color: #e8e8fc;
+        /* jasna lawenda przy najechaniu */
+        color: #4c4ccc;
+        /* ciemniejszy odcień ikony */
+    }
+
+    .fas {
+        font-size: 14px;
     }
 </style>
 
-<h2>@ViewData["Title"]</h2>
 <div class="table-container">
     <div class="table-area">
         <div class="table-box">
-            <div class="scrollable-table">
-                <table class="table">
-                    <thead>
+            <h1>Lista studentów</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID studenta</th>
+                        <th>Imię i nazwisko</th>
+                        <th>Nazwa użytkownika</th>
+                        <th>Email</th>
+                        <th>Rola</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var i = 0;
+                    }
+                    @foreach (var student in Model)
+                    {
+                        i++;
                         <tr>
-                            <th>ID</th>
-                            <th>Tytuł</th>
-                            <th>Treść</th>
-                            <th>Użytkownik</th>
-                            <th>Status</th>
-                            <th>Akcje</th>
+                            <td>@i</td>
+                            <td>@student.FirstName @student.LastName</td>
+                            <td>@student.Username</td>
+                            <td>@student.Email</td>
+                            <td>@student.Role</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var z in Model)
-                        {
-                            <tr>
-                                <td>@z.Id</td>
-                                <td>@z.Tytul</td>
-                                <td>@z.Tresc</td>
-                                <td>@(z.User?.Username ?? "Brak danych") <br />@(z.User?.Email ?? "-")</td>
-                                <td>@(z.AktualnyStatus ?? "-")</td>
-                                <td>
-                                    <form asp-action="ZmienStatus" method="post">
-                                        <input type="hidden" name="zgloszenieId" value="@z.Id" />
-                                        <button class="btn" type="submit">Oznacz jako rozwiązane</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -9,7 +9,7 @@ public class Complaint
 
     public bool IsResolved { get; set; } = false;
 
-// connection with User table
+    // connection with User table
     public int UserId { get; set; }
     public User User { get; set; }
 }

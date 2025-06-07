@@ -1,0 +1,83 @@
+@model List<Project_6.Models.OgloszenieViewModel>
+
+@{
+    ViewData["Title"] = "Wszystkie Ogłoszenia";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .ogloszenia-container {
+        width: 90%;
+        max-width: 800px;
+        margin: 60px auto;
+    }
+
+    .ogloszenie-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ogloszenie-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .ogloszenie-message {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 10px;
+    }
+
+    .ogloszenie-meta {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .alert-info {
+        background-color: #d9ecff;
+        color: #0c5460;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+</style>
+
+<div class="ogloszenia-container">
+    <h2>Wszystkie Ogłoszenia</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert-info">Brak dostępnych ogłoszeń.</div>
+    }
+    else
+    {
+        @foreach (var item in Model.OrderByDescending(o => o.CreatedAt))
+        {
+            <div class="ogloszenie-card">
+                <div class="ogloszenie-title">@item.Title</div>
+                <div class="ogloszenie-message">@item.Message</div>
+                <div class="ogloszenie-meta">
+                    Dodano przez: @item.CreateByRole |
+                    @item.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+                </div>
+            </div>
+        }
+    }
+</div>
